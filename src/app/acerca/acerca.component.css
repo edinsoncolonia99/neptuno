@@ -1,0 +1,13 @@
+.mi-clase-css {
+    background-color: white !important;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mi-clase-css p {
+    font-size: 20px !important;
+    color: #333 !important;
+    margin: 0;
+  }
+  

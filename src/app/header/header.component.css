@@ -1,0 +1,44 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 16px;
+  background-color: blue;
+}
+
+mat-toolbar a:first-child {
+  font-size: 20px;
+}
+
+mat-toolbar a.menu-link {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+mat-toolbar a:last-child {
+  font-size: 20px;
+}
+
+mat-toolbar a {
+  color: white;
+}
+
+mat-toolbar a:hover {
+  color: #ccc;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+mat-toolbar a:nth-child(2) {
+  margin-left: 1rem;
+}
+
+.mat-menu-item-active {
+  background-color: #4CAF50; /* color verde */
+  color: white; /* texto en blanco */
+}
+
+

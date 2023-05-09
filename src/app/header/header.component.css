@@ -36,9 +36,5 @@ mat-toolbar a:nth-child(2) {
   margin-left: 1rem;
 }
 
-.mat-menu-item-active {
-  background-color: #4CAF50; /* color verde */
-  color: white; /* texto en blanco */
-}
 
 

@@ -24,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
 import { ResumenComponent} from './resumen/resumen.component';
 
+
 const appRoutes: Routes = [
   
   {path: 'login', component:LoginComponent},
@@ -60,6 +61,8 @@ const appRoutes: Routes = [
     MatCardModule,
     MatMenuModule,
     RouterModule.forRoot(appRoutes),
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 30px;
+  }
+  
+  .fila-1 {
+    display: flex;
+    flex: 1;
+  }
+  
+  .precio-promedio,
+  .ticket-promedio {
+    flex-grow: 1;
+    flex-basis: 0;
+    border: 1px solid black;
+  }
+  
+  .vm2,
+  .unidad-promedio {
+    flex-grow: 1;
+    flex-basis: 0;
+    border: 1px solid black;
+  }
+  
+  .fila-2 {
+    display: flex;
+    flex: 1;
+  }
+  

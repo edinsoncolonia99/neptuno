@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ngh --dir=dist/my-project --branch=gh-pages --no-silent"
+    "deploy": "gh-pages -d dist"
 
   },
   "private": true,

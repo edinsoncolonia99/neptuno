@@ -1,12 +1,15 @@
 {
   "name": "neptuno",
   "version": "0.0.0",
+  "homepage": "https://edinsoncolonia99.github.io/neptuno/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ngh --dir=dist/my-project --branch=gh-pages --no-silent"
+
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "firebase": "^9.21.0",
+    "gh-pages": "^5.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

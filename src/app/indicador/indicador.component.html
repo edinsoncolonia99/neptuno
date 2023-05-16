@@ -1,11 +1,11 @@
 <mat-form-field appearance="fill">
   <mat-label>Rango de consulta</mat-label>
-  <mat-date-range-input [rangePicker]="picker">
+  <mat-date-range-input [rangePicker]= "picker">
     <input matStartDate placeholder="fecha inicial">
     <input matEndDate placeholder="fecha final">
   </mat-date-range-input>
   <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker-toggle matIconSuffix [for]= "picker"></mat-datepicker-toggle>
   <mat-date-range-picker #picker></mat-date-range-picker>
 </mat-form-field>
 

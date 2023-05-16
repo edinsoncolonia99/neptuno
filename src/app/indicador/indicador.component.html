@@ -1,5 +1,16 @@
+<mat-form-field appearance="fill">
+  <mat-label>Rango de consulta</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="fecha inicial">
+    <input matEndDate placeholder="fecha final">
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+
 <div class="contenedor-principal">
-    <div class="fila-1">
+  <div class="fila-1">
       <div class="precio-promedio">
         <h3>Precio promediox</h3>
         <p>Contenido</p>
@@ -19,5 +30,9 @@
         <p>Contenido</p>
       </div>
     </div>
+    
+
+   
+    
   </div>
   

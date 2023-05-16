@@ -10,10 +10,19 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -23,6 +32,9 @@ import { IndicadorComponent } from './indicador/indicador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
 import { ResumenComponent} from './resumen/resumen.component';
+import { environment } from 'src/environment/environment';
+
+
 
 
 const appRoutes: Routes = [
@@ -61,7 +73,10 @@ const appRoutes: Routes = [
     MatCardModule,
     MatMenuModule,
     RouterModule.forRoot(appRoutes),
-    
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule
     
   ],
   providers: [],

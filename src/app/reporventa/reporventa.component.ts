@@ -1,47 +1,74 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+  import { Component, OnInit } from '@angular/core';
+  import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+  import { MatSnackBar } from '@angular/material/snack-bar';
 
-@Component({
-  selector: 'app-reporventa',
-  templateUrl: './reporventa.component.html',
-  styleUrls: ['./reporventa.component.css']
-})
-export class ReporventaComponent implements OnInit {
+  @Component({
+    selector: 'app-reporventa',
+    templateUrl: './reporventa.component.html',
+    styleUrls: ['./reporventa.component.css']
+  })
+  export class ReporventaComponent implements OnInit {
 
-  reporteForm: FormGroup;
+    reporteForm!: FormGroup;
+    formularioEnviado: boolean = false; // Nueva propiedad para verificar si el formulario ha sido enviado
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
-    this.reporteForm = this.formBuilder.group({
-      ventaConIva: ['', Validators.required],
-      totalUnidades: ['', Validators.required],
-      totalFacturas: ['', Validators.required]
-    });
-  }
+    fechaActual: Date = new Date();
 
-  ngOnInit(): void {}
+    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+      this.reporteForm = this.formBuilder.group({
+        ventaConIva: ['', Validators.required],
+        totalUnidades: ['', Validators.required],
+        totalFacturas: ['', Validators.required],
+        fecha: ['', [Validators.required, this.fechaValida]]
+      });
 
-  cancelar() {
-    // Lógica para cancelar el formulario o realizar alguna acción adicional
-  }
-
-  aceptar() {
-    if (this.reporteForm.invalid) {
-      this.snackBar.open('Por favor, complete todos los campos.', 'Cerrar', { duration: 3000 });
-      return;
+      this.reporteForm.patchValue({ fecha: this.fechaActual });
     }
 
-    const ventaConIva = this.reporteForm.get('ventaConIva')?.value;
-    const totalUnidades = this.reporteForm.get('totalUnidades')?.value;
-    const totalFacturas = this.reporteForm.get('totalFacturas')?.value;
+    ngOnInit(): void {
+      
+    }
 
-    if (confirm('¿Los datos son correctos?')) {
-      console.log('Datos enviados:', ventaConIva, totalUnidades, totalFacturas);
-      // subir a servidor
-      this.snackBar.open('Los datos han sido enviados', 'Cerrar', { duration: 4000 });
-      this.reporteForm.reset();
+    cancelar() {
+      // Lógica para cancelar el formulario o realizar alguna acción adicional
+    }
 
+    aceptar() {
+      this.formularioEnviado = true; // Establecer el formulario como enviado
+
+      if (this.reporteForm.invalid) {
+        this.snackBar.open('Campo pendiente', 'Cerrar', { duration: 3000 });
+        return;
+      }
+
+      const ventaConIva = this.reporteForm.get('ventaConIva')?.value;
+      const totalUnidades = this.reporteForm.get('totalUnidades')?.value;
+      const totalFacturas = this.reporteForm.get('totalFacturas')?.value;
+      const fecha = this.reporteForm.get('fecha')?.value;
+
+      if (totalFacturas > totalUnidades) {
+        this.snackBar.open('El total de facturas no puede ser mayor que el total de unidades. Verificar', 'Cerrar', { duration: 3000 });
+        return;
+      }
+
+      if (confirm('¿Los datos son correctos?')) {
+        console.log('Datos enviados:', ventaConIva, totalUnidades, totalFacturas);
+        // subir a servidor
+        this.snackBar.open('Los datos han sido enviados', 'Cerrar', { duration: 9000 });
+        this.reporteForm.reset();
+        this.formularioEnviado = false; // Reiniciar el estado del formulario enviado
+        
+      }
+    }
+
+    fechaValida(control: any) {
+      const fechaSeleccionada = new Date(control.value);
+      const fechaActual = new Date();
+
+      if (fechaSeleccionada > fechaActual) {
+        return { fechaInvalida: true };
+      }
+
+      return null;
+    }
   }
-  
-}
-}

@@ -1,37 +1,39 @@
-<mat-form-field>
-  <mat-label>Elegir la fecha</mat-label>
-  <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" class="custom-placeholder">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
+<div class="form-container align-left">
+  <mat-form-field>
+    <mat-label>Elegir la fecha</mat-label>
+    <input matInput [matDatepicker]= "picker" formControlName="fecha" placeholder="MM/DD/YYYY" class="custom-placeholder">
+    <mat-datepicker-toggle matSuffix [for]= "picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
 
-<form [formGroup]= "reporteForm" (ngSubmit)= "aceptar()">
-  <ng-container *ngIf= "reporteForm.invalid && (reporteForm.dirty || reporteForm.touched)">
-    <div class="alert alert-danger">
-      <p>Por favor, complete todos los campos.</p>
+  <form [formGroup]= "reporteForm" (ngSubmit)= "aceptar()">
+    <ng-container *ngIf= "reporteForm.invalid && formularioEnviado">
+      <div class="alert alert-danger">
+        <p>Por favor, complete todos los campos html.</p>
+      </div>
+    </ng-container>
+
+    <div>
+      <mat-form-field class="custom-form-field">
+        <mat-label class="custom-label">Ventas con IVA</mat-label>
+        <input matInput type="number" formControlName="ventaConIva" required>
+      </mat-form-field>
     </div>
-  </ng-container>
-  
-  <div>
-    <mat-form-field>
-      <mat-label>Ventas con IVA</mat-label>
-      <input matInput type="number" formControlName="ventaConIva" required>
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field>
-      <mat-label>Total # de unidades</mat-label>
-      <input matInput type="number" formControlName="totalUnidades" required>
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field>
-      <mat-label>Total # de facturas</mat-label>
-      <input matInput type="number" formControlName="totalFacturas" required>
-    </mat-form-field>
-  </div>
-  <div>
-    <button mat-raised-button type="submit">Aceptar</button>
-    <button mat-raised-button type="button" (click)= "cancelar()">Cancelar</button>
-  </div>
-</form>
+    <div>
+      <mat-form-field class="custom-form-field">
+        <mat-label class="custom-label">Total # de unidades</mat-label>
+        <input matInput type="number" formControlName="totalUnidades" required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="custom-form-field">
+        <mat-label class="custom-label">Total # de facturas</mat-label>
+        <input matInput type="number" formControlName="totalFacturas" required>
+      </mat-form-field>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button type="submit">Aceptar</button>
+      <button mat-raised-button type="button" (click)= "cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>

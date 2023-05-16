@@ -1,0 +1,30 @@
+<form [formGroup]= "reporteForm" (ngSubmit)= "aceptar()">
+  <ng-container *ngIf="reporteForm.invalid && (reporteForm.dirty || reporteForm.touched)">
+    <div class="alert alert-danger">
+      <p>Por favor, complete todos los campos.</p>
+    </div>
+  </ng-container>
+  
+  <div>
+    <mat-form-field>
+      <mat-label>Ventas con IVA</mat-label>
+      <input matInput type="number" formControlName="ventaConIva" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Total # de unidades</mat-label>
+      <input matInput type="number" formControlName="totalUnidades" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Total # de facturas</mat-label>
+      <input matInput type="number" formControlName="totalFacturas" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button type="submit">Aceptar</button>
+    <button mat-raised-button type="button" (click)="cancelar()">Cancelar</button>
+  </div>
+</form>

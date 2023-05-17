@@ -10,9 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -27,8 +24,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 import { NotFoundComponent } from './not-found/not-found.component';
-
-
 import { AcercaComponent} from './acerca/acerca.component';
 import { IndicadorComponent } from './indicador/indicador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -38,13 +33,10 @@ import { ReporventaComponent } from './reporventa/reporventa.component';
 import { ResulventaComponent } from './resulventa/resulventa.component';
 import { MenuppalComponent } from './menuppal/menuppal.component';
 
-//import { environment } from 'src/environment/environment';
-
-
-
 
 const appRoutes: Routes = [
   
+  {path: 'menuppal', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
   {path: 'acerca', component:AcercaComponent},
   {path: 'indicador', component:IndicadorComponent},

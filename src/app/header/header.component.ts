@@ -17,6 +17,6 @@ export class HeaderComponent implements OnInit {
     // y luego redirigir al usuario a la página de inicio de sesión
 
     // Ejemplo de redireccionamiento a la página de inicio de sesión
-    window.location.href = '/login';
+    //window.location.href = '/login';
   }
 }

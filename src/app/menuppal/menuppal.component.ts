@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menuppal',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuppalComponent implements OnInit {
 
-  constructor(){
+  constructor(private router: Router){
 
+  }
+  redirectToLogin() {
+    this.router.navigate(['/login']);
+    
+  }
+
+  showMessage() {
+    alert('Se debe iniciar sesión');
   }
 
   ngOnInit(): void{

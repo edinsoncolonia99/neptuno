@@ -17,22 +17,26 @@
 
 
   <p *ngIf= "ventapromedio > 0">
-    Venta Promedio por Factura : {{ ventapromedio }}
-    Unidad Promedio por Factura {{ unidadpromedio }}
-    Precio Promedio {{preciopromedio }}
+    Vpf : {{ ventapromedio }}
+    Upf {{ unidadpromedio }}
+    Pp {{preciopromedio }}
   </p>
 
-
- <!-- 
-    **** Este codigo funciona en el momento de querer consultar
-    *** las cifras que hacen parte de la consulta, el UNO A UNO
-    
   <div class="results-container" *ngFor= "let resultado of baseventa">
     <div class="column">
-      <p>{{ resultado.ventas }}</p>
+      
+      <p>
+        <mat-icon>attach_money</mat-icon>
+        {{ resultado.ventas }}</p>
     </div>
     
       <p>{{ resultado.unidades }}</p>
       <p>{{ resultado.facturas }}</p> 
   </div>
-  -->
+  <p>Ventas</p>
+  <p>Unidades</p>
+  <p>Facturas</p>
+  <p>Presupuesto</p>
+  <p>Cumpl%</p>
+
+  

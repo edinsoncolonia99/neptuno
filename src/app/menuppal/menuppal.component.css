@@ -2,12 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
 }
 
 .button-row {
   display: flex;
   justify-content: center;
-  margin: 10px 0; /* Aplica un margen de 10px encima y debajo de los botones */
+  margin: 10px 0;
 }
 
 .center-button-row {
@@ -17,22 +20,38 @@
 }
 
 .custom-button {
-  width: 130px;
+  width: 150px;
   height: 130px;
-  font-size: 16px;
-  margin: 0 10px; /* Aplica un margen de 10px a la derecha y a la izquierda */
-  border-radius: 20px; /* Aplica bordes curvos */
-  text-decoration: none; /* Elimina las líneas */
-  outline: none; /* Elimina el contorno al hacer clic */
-  border: none; /* Elimina los bordes */
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 10px;
+}
+
+.button-icon {
+  position: absolute; /* Establece la posición absoluta para el icono */
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+  left: 5px; /* Ajusta la distancia desde la izquierda */
+  font-size: 30px;
 }
 
 .custom-login-button {
-  background-color: #11dad0; /* Ajusta el color de fondo según tus necesidades */
-  color: #000000; /* Ajusta el color del texto según tus necesidades */
+  width: 310px; /* Ajusta el ancho del botón de login según tus necesidades */
+  color: #000000;
+  justify-content: center;
 }
 
-.custom-option-button{
-  background-color: #11dad0; /* Ajusta el color de fondo según tus necesidades */
-  color: #000000; /* Ajusta el color del texto según tus necesidades */
+.custom-option-button {
+  color: #000000;
 }
+

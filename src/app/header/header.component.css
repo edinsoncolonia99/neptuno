@@ -1,40 +1,6 @@
-mat-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  padding: 0 16px;
-  background-color: blue;
-}
-
-mat-toolbar a:first-child {
+.menu-title {
+  font-weight: bold;
   font-size: 20px;
+  margin: 20px 0 10px 30px;
+  border-bottom: 1px solid #000000;
 }
-
-mat-toolbar a.menu-link {
-  font-size: 20px;
-  padding-left: 20px;
-}
-
-mat-toolbar a:last-child {
-  font-size: 20px;
-}
-
-mat-toolbar a {
-  color: white;
-}
-
-mat-toolbar a:hover {
-  color: #ccc;
-}
-
-.fill-remaining-space {
-  flex: 1 1 auto;
-}
-
-mat-toolbar a:nth-child(2) {
-  margin-left: 1rem;
-}
-
-
-

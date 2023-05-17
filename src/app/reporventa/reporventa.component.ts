@@ -1,6 +1,7 @@
   import { Component, OnInit } from '@angular/core';
   import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
   @Component({
     selector: 'app-reporventa',
@@ -14,7 +15,7 @@
 
     fechaActual: Date = new Date();
 
-    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private router:Router) {
       this.reporteForm = this.formBuilder.group({
         ventaConIva: ['', Validators.required],
         totalUnidades: ['', Validators.required],
@@ -59,6 +60,10 @@
         this.formularioEnviado = false; // Reiniciar el estado del formulario enviado
         
       }
+    }
+
+    consultar(){
+      this.router.navigate(['/resultado']);
     }
 
     fechaValida(control: any) {

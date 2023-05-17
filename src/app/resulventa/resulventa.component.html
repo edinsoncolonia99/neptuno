@@ -1,0 +1,38 @@
+<div class="form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Rango de consultas</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Fecha inicial">
+        <input matEndDate placeholder="Fecha final">
+      </mat-date-range-input>
+  
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+  
+    <div class="button-container">
+      <button mat-raised-button color="primary">Consultar</button>
+    </div>
+  </div>
+
+
+  <p *ngIf= "ventapromedio > 0">
+    Venta Promedio por Factura : {{ ventapromedio }}
+    Unidad Promedio por Factura {{ unidadpromedio }}
+    Precio Promedio {{preciopromedio }}
+  </p>
+
+
+ <!-- 
+    **** Este codigo funciona en el momento de querer consultar
+    *** las cifras que hacen parte de la consulta, el UNO A UNO
+    
+  <div class="results-container" *ngFor= "let resultado of baseventa">
+    <div class="column">
+      <p>{{ resultado.ventas }}</p>
+    </div>
+    
+      <p>{{ resultado.unidades }}</p>
+      <p>{{ resultado.facturas }}</p> 
+  </div>
+  -->

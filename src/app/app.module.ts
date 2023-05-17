@@ -35,7 +35,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
 import { ResumenComponent} from './resumen/resumen.component';
 import { ReporventaComponent } from './reporventa/reporventa.component';
-import { environment } from 'src/environment/environment';
+import { ResulventaComponent } from './resulventa/resulventa.component';
+
+//import { environment } from 'src/environment/environment';
 
 
 
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
   {path: 'dashboard', component:DashboardComponent},
   {path: 'usuarios', component:UsuariosComponent},
   {path: 'resumen', component:ResumenComponent},
+  {path: 'resultado', component: ResulventaComponent},
   {path: '',
   redirectTo: '/login',
   pathMatch: 'full'
@@ -66,7 +69,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     UsuariosComponent,
     ResumenComponent,
-    ReporventaComponent
+    ReporventaComponent,
+    ResulventaComponent,
   ],
   imports: [
     BrowserModule,

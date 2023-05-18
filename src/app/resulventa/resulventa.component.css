@@ -1,33 +1,34 @@
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .mat-form-field {
-    margin-bottom: 16px;
-    width: 100%;
-  }
-  
-  mat-label {
-    font-weight: bold;
-  }
-  
-  .button-container {
-    margin-top: 16px;
-  }
-  
-  button {
-    margin-right: 8px;
-  }
+.ventas {
+  text-align: center;
+  font-size: 24px;
+  color: green;
+}
 
-  .results-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .column {
-    flex-basis: 50%;
-  }
-  
+.venta-valor {
+  font-size: 40px;
+  color: green;
+  font-weight: bold;
+}
+
+.venta-etiqueta {
+  font-size: 20px;
+  color: gray;
+}
+
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-info .unidades {
+  margin-right: 10px;
+}
+
+.unidades {
+  font-size: 20px;
+}
+
+.facturas {
+  font-size: 20px;
+}

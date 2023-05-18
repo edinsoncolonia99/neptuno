@@ -1,34 +1,34 @@
 <div class="form-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Rango de consultas</mat-label>
-      <mat-date-range-input [rangePicker]="picker">
-        <input matStartDate placeholder="Fecha inicial">
-        <input matEndDate placeholder="Fecha final">
-      </mat-date-range-input>
-  
-      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-date-range-picker #picker></mat-date-range-picker>
-    </mat-form-field>
-  
-    <div class="button-container">
-      <button mat-raised-button color="primary">Consultar</button>
-    </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Rango de consultas</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Fecha inicial" [(ngModel)]="startDateInput">
+      <input matEndDate placeholder="Fecha final" [(ngModel)]="endDateInput">
+    </mat-date-range-input>
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)= "consultar()">Consultar</button>
   </div>
+</div>
 
 
   <div class="ventas">
-    <p class="venta-valor">$ 100</p>
+    <p class="venta-valor">$ {{totalVentas}}</p>
     <p class="venta-etiqueta">Ventas Totales</p>
   </div>
   
 
   <div class="result-info">
     <div class="info-container">
-      <p class="unidades-value">999</p>
+      <p class="unidades-value">{{totalunidades}}</p>
       <p class="unidades">Unidades</p>
     </div>
     <div class="info-container">
-      <p class="facturas-value">99</p>
+      <p class="facturas-value">{{totalFacturas}}</p>
       <p class="facturas">Facturas</p>
     </div>
   </div>

@@ -23,22 +23,26 @@
   
 
   <div class="result-info">
-    <p class="unidades"> 999</p>
-    <p class="unidades">Unidades</p>
-    <p class="facturas"> 99</p>
-    <p class="facturas">Facturas</p>
+    <div class="info-container">
+      <p class="unidades-value">999</p>
+      <p class="unidades">Unidades</p>
+    </div>
+    <div class="info-container">
+      <p class="facturas-value">99</p>
+      <p class="facturas">Facturas</p>
+    </div>
   </div>
   
-  <p *ngIf= "ventapromedio > 0">
+  <!--<p *ngIf= "ventapromedio > 0">
     Vpf : {{ ventapromedio }}
     Upf {{ unidadpromedio }}
     Pp {{preciopromedio }}
-  </p>
+  </p>-->
 
+  <!--
   <div class="results-container" *ngFor= "let resultado of baseventa">
     <div class="column">
-      
-      <p>
+    <p>
         <mat-icon>attach_money</mat-icon>
         {{ resultado.ventas }}</p>
     </div>
@@ -46,7 +50,7 @@
       <p>{{ resultado.unidades }}</p>
       <p>{{ resultado.facturas }}</p> 
   </div>
- 
+ -->
  
 
   

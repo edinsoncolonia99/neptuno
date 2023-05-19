@@ -2,6 +2,7 @@
   import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   import { MatSnackBar } from '@angular/material/snack-bar';
   import { Router } from '@angular/router';
+  import { VolverService } from '../volverservices.service';
 
   @Component({
     selector: 'app-reporventa',
@@ -15,7 +16,8 @@
 
     fechaActual: Date = new Date();
 
-    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private router:Router) {
+    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, 
+      private router:Router, private volverService:VolverService) {
       this.reporteForm = this.formBuilder.group({
         ventaConIva: ['', Validators.required],
         totalUnidades: ['', Validators.required],
@@ -28,6 +30,10 @@
 
     ngOnInit(): void {
       
+    }
+
+    volverPpal() {
+      this.volverService.volver();
     }
 
     cancelar() {

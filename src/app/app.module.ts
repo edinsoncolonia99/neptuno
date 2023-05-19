@@ -18,7 +18,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
+import { MatNativeDateModule} from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -32,6 +32,8 @@ import { ResumenComponent} from './resumen/resumen.component';
 import { ReporventaComponent } from './reporventa/reporventa.component';
 import { ResulventaComponent } from './resulventa/resulventa.component';
 import { MenuppalComponent } from './menuppal/menuppal.component';
+import { ReturnComponent } from './return/return.component';
+import { VolverService } from './volverservices.service';
 
 
 const appRoutes: Routes = [
@@ -45,6 +47,7 @@ const appRoutes: Routes = [
   {path: 'usuarios', component:UsuariosComponent},
   {path: 'resumen', component:ResumenComponent},
   {path: 'resultado', component: ResulventaComponent},
+  {path: 'return', component: ReturnComponent},
   {path: '',
   redirectTo: '/menuppal',
   pathMatch: 'full'
@@ -64,7 +67,8 @@ const appRoutes: Routes = [
     ResumenComponent,
     ReporventaComponent,
     ResulventaComponent,
-    MenuppalComponent 
+    MenuppalComponent,
+    ReturnComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,7 +89,8 @@ const appRoutes: Routes = [
     MatIconModule,
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [VolverService],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

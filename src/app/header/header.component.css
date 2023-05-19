@@ -1,9 +1,19 @@
+a {
+  text-decoration: none; /* Elimina la decoración de subrayado */
+  outline: none; /* Elimina el contorno al hacer clic */
+}
 .header {
 
   margin-bottom: 20px;
 }
 
+.title-text {
+  text-decoration: none;
+}
+
 .menu-title {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 20px;
   margin: 20px 0 10px 30px;
@@ -23,5 +33,5 @@
 }
 
 .menu-title .icon {
-  order: 2;
+  margin-right: 10px;
 }

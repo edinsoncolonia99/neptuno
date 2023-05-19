@@ -19,6 +19,7 @@ export class BaseventaService{
             //new ObjetoModelo('007', 'T6', new Date(2022, 6, 17), 2200, 110, 22, 'MEDELLIN'),
             //new ObjetoModelo('008', 'T8', new Date(2022, 7, 28), 1700, 85, 17, 'MEDELLIN'),
             //new ObjetoModelo('009', 'T9', new Date(2022, 8, 9), 1900, 95, 19, 'MEDELLIN'),
-            new ObjetoModelo('010', 'T10', new Date(2022, 9, 21), 2800, 140, 28, 'MEDELLIN')]
+            new ObjetoModelo('010', 'T10', new Date(2022, 9, 21), 2800, 140, 28, 'MEDELLIN'),
+            new ObjetoModelo('010', 'T10', new Date(2022, 9, 21), 1, 1, 1, 'MEDELLIN')]
     }
 }

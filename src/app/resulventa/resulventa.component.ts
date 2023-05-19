@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ObjetoModelo } from '../baseventa.model';
 import { BaseventaService } from '../baseventa.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resulventa',
@@ -18,12 +19,14 @@ export class ResulventaComponent implements OnInit {
   public startDateInput: string = ''; // Variable para almacenar la fecha inicial seleccionada
   public endDateInput: string = ''; // Variable para almacenar la fecha final seleccionada
 
-  constructor(public baseventaService: BaseventaService) {}
+  constructor(public baseventaService: BaseventaService, private router:Router) {}
 
   ngOnInit(): void {
     this.baseventa = this.baseventaService.getContacts();
     this.calcularIndicadores();
   }
+
+
 
   consultar(): void {
     console.log('Fecha inicial:', this.startDateInput);

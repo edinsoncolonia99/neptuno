@@ -1,7 +1,7 @@
   import { Component, OnInit } from '@angular/core';
   import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+  import { Router } from '@angular/router';
 
   @Component({
     selector: 'app-reporventa',
@@ -60,6 +60,11 @@ import { Router } from '@angular/router';
         this.formularioEnviado = false; // Reiniciar el estado del formulario enviado
         
       }
+    }
+
+
+    salir(){
+      this.router.navigate(['/menuppal']);
     }
 
     consultar(){

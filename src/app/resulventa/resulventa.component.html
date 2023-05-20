@@ -1,3 +1,8 @@
+<div class="volver-container">
+  <mat-icon class="volver-icon">arrow_back</mat-icon>
+  <a class="volver-link" (click)= "volverPpal()">Volver</a>
+</div>
+
 <div class="form-container">
   <mat-form-field appearance="fill">
     <mat-label>Rango de consultas</mat-label>
@@ -51,6 +56,14 @@
       <p>{{ resultado.facturas }}</p> 
   </div>
  -->
- 
-
+ <ngx-charts-advanced-pie-chart
+ [view] ="view"
+ scheme="cool"
+ [results]= "results"
+ [gradient]= "gradient"
+ (select)= "onSelect($event)"
+ (activate)= "onActivate($event)"
+ (deactivate) ="onDeactivate($event)"
+>
+</ngx-charts-advanced-pie-chart>
   

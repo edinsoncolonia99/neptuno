@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes} from '@angular/router';
@@ -34,6 +35,7 @@ import { ResulventaComponent } from './resulventa/resulventa.component';
 import { MenuppalComponent } from './menuppal/menuppal.component';
 import { ReturnComponent } from './return/return.component';
 import { VolverService } from './volverservices.service';
+import { OperativoComponent } from './operativo/operativo.component';
 
 
 const appRoutes: Routes = [
@@ -43,9 +45,10 @@ const appRoutes: Routes = [
   {path: 'acerca', component:AcercaComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
-  {path: 'dashboard', component:DashboardComponent},
-  {path: 'usuarios', component:UsuariosComponent},
   {path: 'resumen', component:ResumenComponent},
+  {path: 'operativo', component:OperativoComponent},  
+  {path: 'usuarios', component:UsuariosComponent},
+  
   {path: 'resultado', component: ResulventaComponent},
   {path: 'return', component: ReturnComponent},
   {path: '',
@@ -69,6 +72,7 @@ const appRoutes: Routes = [
     ResulventaComponent,
     MenuppalComponent,
     ReturnComponent,
+    OperativoComponent
   ],
   imports: [
     BrowserModule,
@@ -87,6 +91,7 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     ReactiveFormsModule,
     MatIconModule,
+    NgxChartsModule
     
   ],
   providers: [VolverService],

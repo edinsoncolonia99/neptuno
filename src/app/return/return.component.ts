@@ -9,14 +9,11 @@ import { VolverService } from '../volverservices.service';
 })
 export class ReturnComponent implements OnInit {
 
-  constructor(private router:Router, private volverService:VolverService){
+  constructor(private router:Router){
 
   }
 
-  volver(){
-    this.router.navigate(['/menuppal']);
-  }
-
+  
 
   ngOnInit(): void {
       

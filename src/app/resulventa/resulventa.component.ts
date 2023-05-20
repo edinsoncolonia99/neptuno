@@ -4,11 +4,13 @@ import { BaseventaService } from '../baseventa.service';
 import { Router } from '@angular/router';
 import { VolverService } from '../volverservices.service';
 
+
 @Component({
   selector: 'app-resulventa',
   templateUrl: './resulventa.component.html',
   styleUrls: ['./resulventa.component.css']
 })
+
 export class ResulventaComponent implements OnInit {
   public baseventa: ObjetoModelo[] = [];
   public ventapromedio: number = 0;
@@ -17,16 +19,9 @@ export class ResulventaComponent implements OnInit {
   public totalVentas: number = 0;
   public totalunidades: number = 0;
   public totalFacturas: number = 0;
-  public startDateInput: string = ''; // Variable para almacenar la fecha inicial seleccionada
-  public endDateInput: string = ''; // Variable para almacenar la fecha final seleccionada
-  public view: [number, number] = [700, 400];
-  public gradient: boolean = true;
-  public showLegend: boolean = true;
-  public showLabels: boolean = true;
-  public isDoughnut: boolean = false;
-  public colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
-  };
+  public startDateInput: string = ''; 
+  public endDateInput: string = ''; 
+  
 
   constructor(
     public baseventaService: BaseventaService,
@@ -69,24 +64,5 @@ export class ResulventaComponent implements OnInit {
         this.totalFacturas = totalFacturas;
       }
     }
-  }
-
-  onSelect(data: any): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
-
-  onActivate(data: any): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
-  }
-
-  onDeactivate(data: any): void {
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
-
-  get results(): { name: string; value: number }[] {
-    return [
-      { name: 'Ventas', value: this.totalVentas },
-      // Agrega aquí otros valores que deseas mostrar en el gráfico
-    ];
   }
 }

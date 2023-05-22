@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 
-import { LoginComponent } from './login/login.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +29,7 @@ import { AcercaComponent} from './acerca/acerca.component';
 import { IndicadorComponent } from './indicador/indicador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
+
 import { ResumenComponent} from './resumen/resumen.component';
 import { ReporventaComponent } from './reporventa/reporventa.component';
 import { ResulventaComponent } from './resulventa/resulventa.component';
@@ -36,6 +37,9 @@ import { MenuppalComponent } from './menuppal/menuppal.component';
 import { ReturnComponent } from './return/return.component';
 import { VolverService } from './volverservices.service';
 import { OperativoComponent } from './operativo/operativo.component';
+import { OpertiendaComponent }from './opertienda/opertienda.component';
+import { OpersubmenuComponent } from './opersubmenu/opersubmenu.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -48,6 +52,7 @@ const appRoutes: Routes = [
   {path: 'resumen', component:ResumenComponent},
   {path: 'operativo', component:OperativoComponent},  
   {path: 'usuarios', component:UsuariosComponent},
+  {path: 'opersubmenu', component:OpersubmenuComponent},
   
   {path: 'resultado', component: ResulventaComponent},
   {path: 'return', component: ReturnComponent},
@@ -72,7 +77,9 @@ const appRoutes: Routes = [
     ResulventaComponent,
     MenuppalComponent,
     ReturnComponent,
-    OperativoComponent
+    OperativoComponent,
+    OpertiendaComponent,
+    OpersubmenuComponent
   ],
   imports: [
     BrowserModule,

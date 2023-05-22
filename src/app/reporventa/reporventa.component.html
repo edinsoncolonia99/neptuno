@@ -11,7 +11,7 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-  <form [formGroup]="reporteForm" (ngSubmit)="aceptar()">
+  <form [formGroup]= "reporteForm" (ngSubmit)= "aceptar()">
     <ng-container *ngIf="reporteForm.invalid && formularioEnviado">
       <div class="alert alert-danger">
         <p>Por favor, complete todos los campos.</p>

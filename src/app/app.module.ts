@@ -25,7 +25,6 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AcercaComponent} from './acerca/acerca.component';
 import { IndicadorComponent } from './indicador/indicador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
@@ -34,7 +33,6 @@ import { ResumenComponent} from './resumen/resumen.component';
 import { ReporventaComponent } from './reporventa/reporventa.component';
 import { ResulventaComponent } from './resulventa/resulventa.component';
 import { MenuppalComponent } from './menuppal/menuppal.component';
-import { ReturnComponent } from './return/return.component';
 import { VolverService } from './volverservices.service';
 import { OperativoComponent } from './operativo/operativo.component';
 import { OpertiendaComponent }from './opertienda/opertienda.component';
@@ -46,7 +44,6 @@ const appRoutes: Routes = [
   
   {path: 'menuppal', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'acerca', component:AcercaComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
   {path: 'resumen', component:ResumenComponent},
@@ -55,7 +52,6 @@ const appRoutes: Routes = [
   {path: 'opersubmenu', component:OpersubmenuComponent},
   
   {path: 'resultado', component: ResulventaComponent},
-  {path: 'return', component: ReturnComponent},
   {path: '',
   redirectTo: '/menuppal',
   pathMatch: 'full'
@@ -68,7 +64,6 @@ const appRoutes: Routes = [
     LoginComponent,
     HeaderComponent,
     NotFoundComponent,
-    AcercaComponent,
     IndicadorComponent,
     DashboardComponent,
     UsuariosComponent,
@@ -76,7 +71,6 @@ const appRoutes: Routes = [
     ReporventaComponent,
     ResulventaComponent,
     MenuppalComponent,
-    ReturnComponent,
     OperativoComponent,
     OpertiendaComponent,
     OpersubmenuComponent

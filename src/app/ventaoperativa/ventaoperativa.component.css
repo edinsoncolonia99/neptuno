@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Fondo de fila gris */
+  }
+  
+  .row:nth-child(2n) {
+    background-color: #d5d2d2; /* Fondo de fila blanca para las filas pares */
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  

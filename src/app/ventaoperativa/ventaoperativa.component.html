@@ -1,3 +1,7 @@
+<div class="volver-container">
+  <mat-icon class="volver-icon">arrow_back</mat-icon>
+  <a class="volver-link" (click)= "volverAtras()">Volver</a>
+</div>
 <div class="form-container">
     <form [formGroup]= "consultaForm" (ngSubmit)= "consultarDatos()">
       <mat-form-field>
@@ -24,9 +28,7 @@
   
     <table>
       <thead>
-        <tr>
-          <th>Código</th>
-          <th>Nombre</th>
+        <tr class="row">
           <th>Fecha</th>
           <th>Ventas</th>
           <th>Unidades</th>
@@ -34,14 +36,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor= "let objeto of objetoModeloList">
-          <td>{{ objeto.codigo }}</td>
-          <td>{{ objeto.nombre }}</td>
-          <td>{{ objeto.fecha | date: 'MM/dd/yyyy' }}</td>
-          <td>{{ objeto.ventas }}</td>
-          <td>{{ objeto.unidades }}</td>
-          <td>{{ objeto.facturas }}</td>
-        </tr>
+        <table>
+          <tr *ngFor= "let objeto of objetoModeloList" class="row">
+            <td>{{ objeto.fecha | date: 'MM/dd/yyyy'}}</td>
+            <td>{{ objeto.ventas }}</td>
+            <td>{{ objeto.unidades }}</td>
+            <td>{{ objeto.facturas }}</td>
+            <td>{{ objeto.ciudad }}</td>
+            <td class="actions-container">
+              <mat-icon (click)= "eliminar()" >delete</mat-icon>
+            </td>
+          </tr>
+        </table>
       </tbody>
     </table>
   </div>

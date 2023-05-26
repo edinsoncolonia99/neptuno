@@ -30,7 +30,7 @@
     }
 
     ngOnInit(): void {
-      
+      console.log();
     }
 
     volverPpal() {

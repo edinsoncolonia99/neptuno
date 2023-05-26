@@ -38,6 +38,8 @@ import { OperativoComponent } from './operativo/operativo.component';
 import { OpertiendaComponent }from './opertienda/opertienda.component';
 import { OpersubmenuComponent } from './opersubmenu/opersubmenu.component';
 import { LoginComponent } from './login/login.component';
+import { VentaoperativaComponent } from './ventaoperativa/ventaoperativa.component';
+import { ObjetoModelo } from './baseventa.model';
 
 
 const appRoutes: Routes = [
@@ -50,8 +52,7 @@ const appRoutes: Routes = [
   {path: 'operativo', component:OperativoComponent},  
   {path: 'usuarios', component:UsuariosComponent},
   {path: 'opersubmenu', component:OpersubmenuComponent},
-  
-  {path: 'resultado', component: ResulventaComponent},
+  {path: 'resultado', component:VentaoperativaComponent}, //trasladar a ResulventaCom..
   {path: '',
   redirectTo: '/menuppal',
   pathMatch: 'full'
@@ -73,7 +74,8 @@ const appRoutes: Routes = [
     MenuppalComponent,
     OperativoComponent,
     OpertiendaComponent,
-    OpersubmenuComponent
+    OpersubmenuComponent,
+    VentaoperativaComponent
   ],
   imports: [
     BrowserModule,

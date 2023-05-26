@@ -1,0 +1,48 @@
+<div class="form-container">
+    <form [formGroup]= "consultaForm" (ngSubmit)= "consultarDatos()">
+      <mat-form-field>
+        <mat-label>Fecha inicial</mat-label>
+        <input matInput [matDatepicker]= "picker1" formControlName="fechaInicial" placeholder="MM/DD/YYYY">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Fecha final</mat-label>
+        <input matInput [matDatepicker]= "picker2" formControlName="fechaFinal" placeholder="MM/DD/YYYY">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Código de tienda</mat-label>
+        <input matInput formControlName="codigoTienda" placeholder="Código">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Consultar</button>
+    </form>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>Fecha</th>
+          <th>Ventas</th>
+          <th>Unidades</th>
+          <th>Facturas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let objeto of objetoModeloList">
+          <td>{{ objeto.codigo }}</td>
+          <td>{{ objeto.nombre }}</td>
+          <td>{{ objeto.fecha | date: 'MM/dd/yyyy' }}</td>
+          <td>{{ objeto.ventas }}</td>
+          <td>{{ objeto.unidades }}</td>
+          <td>{{ objeto.facturas }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

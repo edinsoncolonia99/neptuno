@@ -3,18 +3,18 @@
   <a class="volver-link" (click)= "volverPpal()">Volver</a>
 </div>
 
-<div class="form-container align-left">
+<div class="form-container align-left" [formGroup]= "reporteForm">
   <mat-form-field>
     <mat-label>Elegir la fecha</mat-label>
-    <input matInput [matDatepicker]="picker" formControlName="fecha" placeholder="MM/DD/YYYY" class="custom-placeholder">
+    <input matInput [matDatepicker]= "picker" formControlName="fecha" placeholder="MM/DD/YYYY" class="custom-placeholder">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
-  <form [formGroup]= "reporteForm" (ngSubmit)= "aceptar()">
-    <ng-container *ngIf="reporteForm.invalid && formularioEnviado">
+  <form [formGroup]="reporteForm" (ngSubmit)= "aceptar()">
+    <ng-container *ngIf="reporteForm.controls['fecha'].invalid && formularioEnviado">
       <div class="alert alert-danger">
-        <p>Por favor, complete todos los campos.</p>
+        <p>Por favor, complete la fecha.</p>
       </div>
     </ng-container>
 
@@ -39,11 +39,12 @@
 
     <div class="button-container">
       <button mat-raised-button color="primary" type="submit" class="custom-button">Aceptar</button>
-      <button mat-raised-button color="primary" type="button" class="custom-button"(click)="salir()">Salir</button>
-      <button mat-raised-button color="primary" type="button" class="custom-button"(click)="consultar()">Consultar</button>
+      <button mat-raised-button color="primary" type="button" class="custom-button" (click)="salir()">Salir</button>
+      <button mat-raised-button color="primary" type="button" class="custom-button" (click)="consultar()">Consultar</button>
     </div>
   </form>
 </div>
+
 
 
 

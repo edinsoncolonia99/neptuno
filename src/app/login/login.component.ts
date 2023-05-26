@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { LoginPpal, UsuarioTipo} from '../login.model'
+import { VolverService } from '../volverservices.service';
 
 
 @Component({
@@ -11,11 +12,16 @@ export class LoginComponent {
 
   public loginppal:LoginPpal[] = [];
 
-  constructor(){
+  constructor(public volverService:VolverService){
 
   }
   username: string | undefined;
   password: string | undefined;
+
+
+  volverPpal() {
+    this.volverService.volver();
+  }
 
   onSubmit() {
     // Listo para armar un API

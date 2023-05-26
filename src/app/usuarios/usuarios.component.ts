@@ -49,6 +49,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   volverAtras(){
+    this.router.navigate(['/opersubmenu']);
   }
 
   ngOnInit(): void {

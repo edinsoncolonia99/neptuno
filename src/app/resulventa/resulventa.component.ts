@@ -21,6 +21,7 @@ export class ResulventaComponent implements OnInit {
   public totalFacturas: number = 0;
   public startDateInput: string = ''; 
   public endDateInput: string = ''; 
+  filteredBaseVenta: ObjetoModelo[] | undefined;
   
 
   constructor(
@@ -32,6 +33,11 @@ export class ResulventaComponent implements OnInit {
   ngOnInit(): void {
     this.baseventa = this.baseventaService.getContacts();
     this.calcularIndicadores();
+    this.baseventa.forEach(venta => {
+      venta.fecha = new Date(venta.fecha); // Convertir a objeto Date (si no lo es ya)
+    });
+
+
   }
 
   volverPpal() {
@@ -41,6 +47,12 @@ export class ResulventaComponent implements OnInit {
   consultar(): void {
     console.log('Fecha inicial:', this.startDateInput);
     console.log('Fecha final:', this.endDateInput);
+    
+    const starDate = new Date (this.startDateInput);
+    const endDate = new Date (this.endDateInput);
+    
+    this.filteredBaseVenta = this.baseventa.filter
+    (venta => venta.fecha >= starDate && venta.fecha <= endDate);
   }
 
   calcularIndicadores() {

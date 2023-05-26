@@ -7,25 +7,22 @@
   <mat-form-field appearance="fill">
     <mat-label>Rango de consultas</mat-label>
     <mat-date-range-input [rangePicker]="picker">
-      <input matStartDate placeholder="Fecha inicial" [(ngModel)]="startDateInput">
-      <input matEndDate placeholder="Fecha final" [(ngModel)]="endDateInput">
+      <input matStartDate placeholder="Fecha inicial" [(ngModel)]= "startDateInput">
+      <input matEndDate placeholder="Fecha final" [(ngModel)]= "endDateInput">
     </mat-date-range-input>
 
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker-toggle matIconSuffix [for]= "picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
 
   <div class="button-container">
     <button mat-raised-button color="primary" (click)= "consultar()" class="custom-button">Consultar</button>
   </div>
-</div>
-
 
   <div class="ventas">
     <p class="venta-valor">$ {{totalVentas}}</p>
     <p class="venta-etiqueta">Ventas Totales</p>
   </div>
-  
 
   <div class="result-info">
     <div class="info-container">
@@ -37,7 +34,16 @@
       <p class="facturas">Facturas</p>
     </div>
   </div>
-  
+
+  <div *ngIf= "filteredBaseVenta">
+    <div *ngFor= "let venta of filteredBaseVenta">
+      <p>{{ venta.nombre }} - {{ venta.fecha | date }}</p>
+      <!-- Agrega aquí otros campos que desees mostrar -->
+    </div>
+  </div>
+</div>
+
+
   <!--<p *ngIf= "ventapromedio > 0">
     Vpf : {{ ventapromedio }}
     Upf {{ unidadpromedio }}

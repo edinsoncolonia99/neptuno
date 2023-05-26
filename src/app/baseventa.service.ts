@@ -10,7 +10,7 @@ export class BaseventaService{
 
     getContacts(){
         return [
-            new ObjetoModelo('001', 'T1', new Date(2022, 0, 1), 1000, 50, 10, 'CALI'),
+            new ObjetoModelo('001', 'T1', new Date(2022, 1, 1), 1000, 50, 10, 'CALI'),
             new ObjetoModelo('002', 'T1',  new Date(2022, 1, 15), 2000, 100, 20, 'CALI'),
             new ObjetoModelo('003', 'T2', new Date(2022, 2, 30), 1500, 75, 15, 'BOGOTA'),
             new ObjetoModelo('004', 'T3', new Date(2022, 3, 10), 1800, 90, 18, 'BOGOTA'),

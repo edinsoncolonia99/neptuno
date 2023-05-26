@@ -1,5 +1,5 @@
   import { Component, OnInit } from '@angular/core';
-  import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+  import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
   import { MatSnackBar } from '@angular/material/snack-bar';
   import { Router } from '@angular/router';
   import { VolverService } from '../volverservices.service';
@@ -18,11 +18,12 @@
 
     constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, 
       private router:Router, private volverService:VolverService) {
-      this.reporteForm = this.formBuilder.group({
-        ventaConIva: ['', Validators.required],
-        totalUnidades: ['', Validators.required],
-        totalFacturas: ['', Validators.required],
-        fecha: ['', [Validators.required, this.fechaValida]]
+      
+        this.reporteForm = new FormGroup({
+        ventaConIva: new FormControl ('', Validators.required),
+        totalUnidades: new FormControl ('', Validators.required),
+        totalFacturas: new FormControl ('', Validators.required),
+        fecha: new FormControl('', [Validators.required, this.fechaValida.bind(this)])
       });
 
       this.reporteForm.patchValue({ fecha: this.fechaActual });

@@ -5,14 +5,15 @@
 
 <h1>Ficha técnica</h1>
 <div>
-  <p (click)= "toggleSubMenu()">Usuarios</p>
-  <ul *ngIf= "showSubMenu">
-    <li><p href="#" (click)= "menuCrearUsuario()">Crear</p></li>
-    <p>></p>
-    <li><p href="#">Modificar</p></li>
-    <li><p href="#">Eliminar</p></li>
-    <li><p href="#">Consultar</p></li>
+  <p (click)="toggleSubMenu()">
+    <mat-icon>people</mat-icon> Usuarios
+  </p>
+  <ul class="no-bullets" *ngIf="showSubMenu">
+    <li><p href="#" (click)="menuCrearUsuario()"><mat-icon>add</mat-icon> Crear</p></li>
+    <li><p href="#"><mat-icon>edit</mat-icon> Modificar</p></li>
+    <li><p href="#"><mat-icon>delete</mat-icon> Eliminar</p></li>
+    <li><p href="#"><mat-icon>search</mat-icon> Consultar</p></li>
   </ul>
 </div>
 
-<p>tiendas</p>
+<p><mat-icon>store</mat-icon> tiendas</p>

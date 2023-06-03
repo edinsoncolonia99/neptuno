@@ -1,0 +1,76 @@
+.entrada{
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.clase1{
+  font-size: 22px;
+}
+
+.clase2{
+  font-size: 20px;
+  font-weight: bolder;
+  color: darkblue;
+}
+
+.clase3{
+  font-size: 14px;
+}
+
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin-top: -50px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.center-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-button {
+  width: 150px;
+  height: 130px;
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.265);
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 10px;
+}
+
+.button-icon {
+  position: absolute; /* Establece la posición absoluta para el icono */
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+  left: 5px; /* Ajusta la distancia desde la izquierda */
+  font-size: 30px;
+}
+
+.custom-login-button {
+  width: 310px; /* Ajusta el ancho del botón de login según tus necesidades */
+  color: #000000;
+  justify-content: center;
+}
+
+.custom-option-button {
+  color: #000000;
+}
+

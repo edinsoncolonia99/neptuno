@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VolverService } from '../volverservices.service';
 
 
 @Component({
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./resumen.component.css']
 })
 export class ResumenComponent {
+
+  constructor(private volverService: VolverService){}
+
+  volverPpal() {
+    this.volverService.volver();
+  }
 
 }

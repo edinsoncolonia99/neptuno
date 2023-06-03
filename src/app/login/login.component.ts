@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { LoginPpal, UsuarioTipo} from '../login.model'
+import { VolverService } from '../volverservices.service';
 
-import { loginPpal } from '../login.modelo';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,21 @@ import { loginPpal } from '../login.modelo';
 })
 export class LoginComponent {
 
-  public model:loginPpal = new loginPpal('a', 'b');
+  public loginppal:LoginPpal[] = [];
 
-  username: string | undefined;
+  constructor(public volverService:VolverService){
+
+  }
+  @Input() username: string = '';
   password: string | undefined;
 
+
+  volverPpal() {
+    this.volverService.volver();
+  }
+
   onSubmit() {
-    // Aquí puedes hacer la validación del login y password
+    // Listo para armar un API
     console.log('Username: ' + this.username);
     console.log('Password: ' + this.password);
   }

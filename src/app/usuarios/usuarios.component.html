@@ -1,1 +1,43 @@
-<p>usuarios works!</p>
+<div class="volver-container">
+  <mat-icon class="volver-icon">arrow_back</mat-icon>
+  <a class="volver-link" (click)= "volverAtras()">Volver</a>
+</div>
+
+<div class="container">
+  <form class="form-container" (submit)="crearUsuario()">
+    <mat-form-field>
+      <mat-label>Nombre de usuario</mat-label>
+      <input matInput type="text" id="username" name="username" [(ngModel)]="username" required placeholder="Nombre de la tienda">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" id="password" name="password" [(ngModel)]="password" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Confirme Password</mat-label>
+      <input matInput type="password" id="passwordConfirm" name="passwordConfirm" [(ngModel)]="passwordConfirm" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>e-mail</mat-label>
+      <input matInput type="email" id="email" name="email" [(ngModel)]="email" required placeholder="nombre@dominio">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipo de Usuario</mat-label>
+      <input matInput type="text" id="tipoUsuario" name="tipoUsuario" list="tipo" [(ngModel)]= "usuarioSeleccion">
+      <datalist id="tipo">
+        <option value="Tienda">
+        <option value="Manager">
+      </datalist>
+    </mat-form-field>
+
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" type="submit" class="custom-button">Crear</button>
+      <button mat-raised-button color="warn" type="button" class="custom-button">Salir</button>
+    </div>
+  </form>
+</div>
+

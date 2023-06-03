@@ -1,0 +1,26 @@
+.volver-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .volver-icon {
+    margin-right: 5px;
+  }
+
+.row {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Fondo de fila gris */
+  }
+  
+  .row:nth-child(2n) {
+    background-color: #f1eeee; /* Fondo de fila blanca para las filas pares */
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  

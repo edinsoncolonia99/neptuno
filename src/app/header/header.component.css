@@ -1,40 +1,37 @@
-mat-toolbar {
+a {
+  text-decoration: none; /* Elimina la decoración de subrayado */
+  outline: none; /* Elimina el contorno al hacer clic */
+}
+.header {
+
+  margin-bottom: 20px;
+}
+
+.title-text {
+  text-decoration: none;
+}
+
+.menu-title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 64px;
-  padding: 0 16px;
-  background-color: blue;
-}
-
-mat-toolbar a:first-child {
+  font-weight: bold;
   font-size: 20px;
+  margin: 20px 0 10px 30px;
+  border-bottom: 1px solid #000000;
 }
 
-mat-toolbar a.menu-link {
-  font-size: 20px;
-  padding-left: 20px;
+.menu-title h1 {
+  order: 1;
+  margin-right: 10px;
+  padding-bottom: 5px;
 }
 
-mat-toolbar a:last-child {
-  font-size: 20px;
+.menu-title h1:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #000;
 }
 
-mat-toolbar a {
-  color: white;
+.menu-title .icon {
+  margin-right: 10px;
 }
-
-mat-toolbar a:hover {
-  color: #ccc;
-}
-
-.fill-remaining-space {
-  flex: 1 1 auto;
-}
-
-mat-toolbar a:nth-child(2) {
-  margin-left: 1rem;
-}
-
-
-

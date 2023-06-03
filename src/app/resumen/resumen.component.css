@@ -1,0 +1,9 @@
+.volver-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .volver-icon {
+    margin-right: 5px; /* Ajusta el margen según sea necesario */
+  }

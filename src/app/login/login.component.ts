@@ -15,7 +15,7 @@ export class LoginComponent {
   constructor(public volverService:VolverService){
 
   }
-  username: string | undefined;
+  @Input() username: string = '';
   password: string | undefined;
 
 

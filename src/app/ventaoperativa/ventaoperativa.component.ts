@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BaseventaService } from '../baseventa.service';
 import { ObjetoModelo } from '../baseventa.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { VolverService } from '../volverservices.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +16,6 @@ export class VentaoperativaComponent implements OnInit {
 
   constructor(private baseventaService: BaseventaService,
               private formBuilder: FormBuilder,
-              private volverService: VolverService,
               private router:Router)
             {
               this.consultaForm = this.formBuilder.group({

@@ -1,6 +1,6 @@
 a {
-  text-decoration: none; /* Elimina la decoración de subrayado */
-  outline: none; /* Elimina el contorno al hacer clic */
+  text-decoration: none; 
+  outline: none; 
 }
 .header {
 

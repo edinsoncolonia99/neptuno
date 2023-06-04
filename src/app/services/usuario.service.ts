@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
-import {LoginPpal, UsuarioTipo} from '../login.model'
+import { LoginPpal } from '../login.model'
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class UsuarioService{
-
+    public username: string | undefined;
+    
     constructor(){}
-
+    setUsername(username: string) {
+        this.username = username;
+      }
+      
     getUsers(){
         return[
             new LoginPpal('edi', 'edi@colonia.com')
-        ]
-
-        
+        ]       
     }
 }

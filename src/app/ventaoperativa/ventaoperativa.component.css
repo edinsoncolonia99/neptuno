@@ -11,11 +11,11 @@
 .row {
     display: flex;
     align-items: center;
-    background-color: #ffffff; /* Fondo de fila gris */
+    background-color: #ffffff; 
   }
   
   .row:nth-child(2n) {
-    background-color: #f1eeee; /* Fondo de fila blanca para las filas pares */
+    background-color: #f1eeee; 
   }
 
   .actions-container {

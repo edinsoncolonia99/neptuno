@@ -40,11 +40,12 @@ import { OpersubmenuComponent } from './opersubmenu/opersubmenu.component';
 import { LoginComponent } from './login/login.component';
 import { VentaoperativaComponent } from './ventaoperativa/ventaoperativa.component';
 import { ObjetoModelo } from './baseventa.model';
+import { UsuarioService } from './services/usuario.service';
 
 
 const appRoutes: Routes = [
   
-  {path: 'menuppal', component:MenuppalComponent},
+  {path: 'menuppal/:username', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
@@ -97,7 +98,7 @@ const appRoutes: Routes = [
     NgxChartsModule
     
   ],
-  providers: [VolverService],
+  providers: [VolverService, UsuarioService],
   bootstrap: [AppComponent],
 
 })

@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { LoginPpal, UsuarioTipo} from '../login.model'
+import { Component } from '@angular/core';
+import { LoginPpal} from '../login.model'
 import { VolverService } from '../volverservices.service';
+import { Router } from '@angular/router';
+import { UsuarioService } from '../services/usuario.service';
 
 
 @Component({
@@ -12,20 +14,27 @@ export class LoginComponent {
 
   public loginppal:LoginPpal[] = [];
 
-  constructor(public volverService:VolverService){
+  constructor(public volverService:VolverService,
+              public usuarioService:UsuarioService,
+              public router:Router){
 
   }
-  @Input() username: string = '';
-  password: string | undefined;
+public username: string | undefined;
+password: string | undefined;
 
 
   volverPpal() {
     this.volverService.volver();
   }
 
+  ingresar(){
+    this.router.navigate(['/menuppal', this.username]);
+  }
+
   onSubmit() {
     // Listo para armar un API
-    console.log('Username: ' + this.username);
+    console.log('Username: ' + this.usuarioService.username);
     console.log('Password: ' + this.password);
+    this.usuarioService.setUsername(this.username || '');
   }
 }

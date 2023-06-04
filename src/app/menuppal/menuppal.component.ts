@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { UsuarioService } from '../services/usuario.service'
+
 
 @Component({
   selector: 'app-menuppal',
@@ -7,20 +9,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./menuppal.component.css']
 })
 export class MenuppalComponent implements OnInit {
-
-  constructor(private router: Router){
+  public username: string | null | undefined;
+  
+  constructor(private router: Router,
+              public usuarioService: UsuarioService,
+              private route: ActivatedRoute){
 
   }
-  redirectToLogin() {
+
+  ngOnInit(): void {
+    this.username = this.route.snapshot.paramMap.get('username');
+    };
+  
+
+
+   redirectToLogin() {
     this.router.navigate(['/login']);
     
   }
+
 
   showMessage() {
     alert('Se debe iniciar sesión');
   }
 
-  ngOnInit(): void{
 
-  }
 }

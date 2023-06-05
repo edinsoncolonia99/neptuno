@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { UsuarioService } from '../services/usuario.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,28 +14,26 @@ import { UsuarioService } from '../services/usuario.service';
 export class LoginComponent {
 
   public loginppal:LoginPpal[] = [];
+  public username: string | undefined;
+  public password: string | undefined;
 
   constructor(public volverService:VolverService,
               public usuarioService:UsuarioService,
-              public router:Router){
-
-  }
-public username: string | undefined;
-password: string | undefined;
-
+              public router:Router
+            ){}
 
   volverPpal() {
     this.volverService.volver();
   }
 
-  ingresar(){
-    this.router.navigate(['/menuppal', this.username]);
+  ingresar() {
+    this.router.navigate(['/menuppal']);
   }
 
   onSubmit() {
     // Listo para armar un API
     console.log('Username: ' + this.usuarioService.username);
     console.log('Password: ' + this.password);
-    this.usuarioService.setUsername(this.username || '');
-  }
+    
+}
 }

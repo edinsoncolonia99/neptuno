@@ -45,7 +45,7 @@ import { UsuarioService } from './services/usuario.service';
 
 const appRoutes: Routes = [
   
-  {path: 'menuppal/:username', component:MenuppalComponent},
+  {path: 'menuppal', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
@@ -98,7 +98,7 @@ const appRoutes: Routes = [
     NgxChartsModule
     
   ],
-  providers: [VolverService, UsuarioService],
+  providers: [VolverService, UsuarioService, LoginComponent],
   bootstrap: [AppComponent],
 
 })

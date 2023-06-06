@@ -27,13 +27,13 @@ export class LoginComponent {
   }
 
   ingresar() {
-    this.router.navigate(['/menuppal']);
+    
   }
 
   onSubmit() {
     // Listo para armar un API
-    console.log('Username: ' + this.usuarioService.username);
+    console.log('Username: ' + this.username);
     console.log('Password: ' + this.password);
-    
+    this.router.navigate(['/menuppal']);
 }
 }

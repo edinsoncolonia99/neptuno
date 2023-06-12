@@ -1,7 +1,11 @@
-<div class="volver-container">
+
+
+<div class="volver-container" [style.margin-top.px]= "fijarHeader ? 80 : 0">
   <mat-icon class="volver-icon">arrow_back</mat-icon>
   <a class="volver-link" (click)= "volverAtras()">Volver</a>
 </div>
+
+<h1 [class.fijar-header]= "fijarHeader">Resumen de ventas</h1>
 <div class="form-container">
     <form [formGroup]= "consultaForm" (ngSubmit)= "consultarDatos()">
       <mat-form-field>

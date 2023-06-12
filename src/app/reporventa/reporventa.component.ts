@@ -11,6 +11,8 @@
   })
   export class ReporventaComponent implements OnInit {
 
+
+   
     reporteForm!: FormGroup;
     formularioEnviado: boolean = false; // Nueva propiedad para verificar si el formulario ha sido enviado
 

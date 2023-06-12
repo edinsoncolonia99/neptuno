@@ -9,21 +9,15 @@ import { LoginComponent } from '../login/login.component';
 })
 export class MenuppalComponent implements OnInit {
   
-
- 
-  
   constructor(private router: Router,
               private route: ActivatedRoute){
 
   }
 
-
   ngOnInit(): void {
 
     };
   
-  
-
    redirectToLogin() {
     this.router.navigate(['/login']);  
   }

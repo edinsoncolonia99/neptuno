@@ -80,6 +80,8 @@
   height: 40px;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .volver-icon {
     margin-right: 5px;

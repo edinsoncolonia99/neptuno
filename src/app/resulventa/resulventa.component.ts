@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ObjetoModelo } from '../baseventa.model';
 import { BaseventaService } from '../baseventa.service';
 import { Router } from '@angular/router';
@@ -22,13 +22,15 @@ export class ResulventaComponent implements OnInit {
   public startDateInput: string = ''; 
   public endDateInput: string = ''; 
   filteredBaseVenta: ObjetoModelo[] | undefined;
-  
+
 
   constructor(
     public baseventaService: BaseventaService,
     private router: Router,
     private volverService: VolverService
   ) {}
+
+ 
 
   ngOnInit(): void {
     this.baseventa = this.baseventaService.getContacts();

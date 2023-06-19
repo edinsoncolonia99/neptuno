@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { BaseventaService } from '../baseventa.service';
 import { ObjetoModelo } from '../baseventa.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -11,8 +11,10 @@ import { Router } from '@angular/router';
 })
 export class VentaoperativaComponent implements OnInit {
 
+
   objetoModeloList : ObjetoModelo[] = [];
   consultaForm: FormGroup;
+  public fijarHeader: boolean = true;
 
   constructor(private baseventaService: BaseventaService,
               private formBuilder: FormBuilder,
@@ -24,7 +26,18 @@ export class VentaoperativaComponent implements OnInit {
               codigoTienda: []  
      }); 
     }
-
+    /*
+    @HostListener('window:scroll', ['event'])
+    private handScroll($event:Event){
+      if(($event.target as HTMLElement).children[0].scrollTop > 20 && 
+      !this.fijarHeader){
+        this.fijarHeader = true;
+      }
+      else if(($event.target as HTMLElement).children[0].scrollTop <= 20 &&
+      !this.fijarHeader) {
+       this.fijarHeader = false; 
+      }
+    } */
   ngOnInit(): void {
      // this.consultarDatos();
   }

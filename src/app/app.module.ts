@@ -43,9 +43,10 @@ import { ObjetoModelo } from './baseventa.model';
 import { UsuarioService } from './services/usuario.service';
 
 
+
 const appRoutes: Routes = [
   
-  {path: 'menuppal/:username', component:MenuppalComponent},
+  {path: 'menuppal', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
@@ -76,7 +77,8 @@ const appRoutes: Routes = [
     OperativoComponent,
     OpertiendaComponent,
     OpersubmenuComponent,
-    VentaoperativaComponent
+    VentaoperativaComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -87,7 +89,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
@@ -98,7 +100,7 @@ const appRoutes: Routes = [
     NgxChartsModule
     
   ],
-  providers: [VolverService, UsuarioService],
+  providers: [VolverService, UsuarioService, LoginComponent],
   bootstrap: [AppComponent],
 
 })

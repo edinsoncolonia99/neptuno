@@ -26,7 +26,7 @@ export class VentaoperativaComponent implements OnInit {
               codigoTienda: []  
      }); 
     }
-
+    /*
     @HostListener('window:scroll', ['event'])
     private handScroll($event:Event){
       if(($event.target as HTMLElement).children[0].scrollTop > 20 && 
@@ -37,7 +37,7 @@ export class VentaoperativaComponent implements OnInit {
       !this.fijarHeader) {
        this.fijarHeader = false; 
       }
-    }
+    } */
   ngOnInit(): void {
      // this.consultarDatos();
   }

@@ -5,7 +5,11 @@
   <a class="volver-link" (click)= "volverAtras()">Volver</a>
 </div>
 
-<h1 [class.fijar-header]= "fijarHeader">Resumen de ventas</h1>
+ <!-- Genera la fijacion del header con scroll -->
+ <!--[class.fijar-header]= "fijarHeader" -->
+
+
+<h1 >Resumen de ventas</h1>
 <div class="form-container">
     <form [formGroup]= "consultaForm" (ngSubmit)= "consultarDatos()">
       <mat-form-field>

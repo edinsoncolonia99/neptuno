@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VolverService } from '../volverservices.service';
+import { VolverService } from '../../../core/services/volverservices.service';
 
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { BaseventaService } from '../baseventa.service';
-import { ObjetoModelo } from '../baseventa.model';
+import { BaseventaService } from '../../../core/services/baseventa.service';
+import { ObjetoModelo } from '../../../core/models/baseventa.model';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 

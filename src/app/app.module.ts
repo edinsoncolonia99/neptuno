@@ -23,24 +23,20 @@ import { MatNativeDateModule} from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 
-
-import { NotFoundComponent } from './not-found/not-found.component';
-import { IndicadorComponent } from './indicador/indicador.component';
+import { NotFoundComponent } from './home/not-found/not-found.component';
+import { IndicadorComponent } from './admin/pages/indicador/indicador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { UsuariosComponent} from './usuarios/usuarios.component';
+import { UsuariosComponent} from './admin/pages/usuarios/usuarios.component';
 
-import { ResumenComponent} from './resumen/resumen.component';
-import { ReporventaComponent } from './reporventa/reporventa.component';
-import { ResulventaComponent } from './resulventa/resulventa.component';
-import { MenuppalComponent } from './menuppal/menuppal.component';
-import { VolverService } from './volverservices.service';
-import { OperativoComponent } from './operativo/operativo.component';
-import { OpertiendaComponent }from './opertienda/opertienda.component';
-import { OpersubmenuComponent } from './opersubmenu/opersubmenu.component';
+import { ResumenComponent} from './admin/pages/resumen/resumen.component';
+import { ReporventaComponent } from './admin/pages/reporventa/reporventa.component';
+import { MenuppalComponent } from './home/menuppal/menuppal.component';
+import { VolverService } from './core/services/volverservices.service';
+import { OpersubmenuComponent } from './admin/pages/opersubmenu/opersubmenu.component';
 import { LoginComponent } from './login/login.component';
-import { VentaoperativaComponent } from './ventaoperativa/ventaoperativa.component';
-import { ObjetoModelo } from './baseventa.model';
-import { UsuarioService } from './services/usuario.service';
+import { VentaoperativaComponent } from './admin/pages/ventaoperativa/ventaoperativa.component';
+import { ObjetoModelo } from './core/models/baseventa.model';
+import { UsuarioService } from './core/services/usuario.service';
 
 
 
@@ -50,8 +46,7 @@ const appRoutes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'indicador', component:IndicadorComponent},
   {path: 'reporteventa', component:ReporventaComponent},
-  {path: 'resumen', component:ResumenComponent},
-  {path: 'operativo', component:OperativoComponent},  
+  {path: 'resumen', component:ResumenComponent}, 
   {path: 'usuarios', component:UsuariosComponent},
   {path: 'opersubmenu', component:OpersubmenuComponent},
   {path: 'resultado', component:VentaoperativaComponent}, //trasladar a ResulventaCom..
@@ -72,10 +67,7 @@ const appRoutes: Routes = [
     UsuariosComponent,
     ResumenComponent,
     ReporventaComponent,
-    ResulventaComponent,
     MenuppalComponent,
-    OperativoComponent,
-    OpertiendaComponent,
     OpersubmenuComponent,
     VentaoperativaComponent,
 

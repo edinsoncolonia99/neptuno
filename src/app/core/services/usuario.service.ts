@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LoginPpal } from '../login.model'
+import { LoginPpal } from '../models/login.model'
 
 @Injectable({
     providedIn: 'root'

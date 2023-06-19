@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { LoginPpal} from '../login.model'
-import { VolverService } from '../volverservices.service';
+import { LoginPpal} from '../core/models/login.model'
+import { VolverService } from '../core/services/volverservices.service';
 import { Router } from '@angular/router';
-import { UsuarioService } from '../services/usuario.service';
+import { UsuarioService } from '../core/services/usuario.service';
 
 
 

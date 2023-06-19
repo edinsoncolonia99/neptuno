@@ -2,7 +2,7 @@
   import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
   import { MatSnackBar } from '@angular/material/snack-bar';
   import { Router } from '@angular/router';
-  import { VolverService } from '../volverservices.service';
+  import { VolverService } from '../../../core/services/volverservices.service';
 
   @Component({
     selector: 'app-reporventa',

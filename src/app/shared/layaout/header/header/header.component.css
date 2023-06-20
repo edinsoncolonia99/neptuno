@@ -1,0 +1,51 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.menu-title {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.title-text {
+  text-decoration: none;
+}
+
+.login-button {
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.login-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login-menu-list{
+  text-decoration: none;
+}
+
+.show {
+  display: block;
+}

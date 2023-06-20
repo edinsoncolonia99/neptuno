@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { MenuppalComponent } from '../app/home/menuppal/menuppal.component';
 import { LoginComponent} from '../app/login/login.component';
 import { IndicadorComponent } from '../app/admin/pages/indicador/indicador.component';

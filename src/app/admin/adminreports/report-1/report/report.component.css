@@ -1,0 +1,53 @@
+.contenedor-ppal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 2px solid #ccc;
+    margin: 0 0 12px;
+  }
+
+.nombre-titulo{
+    font-weight: bold;
+    font-size: 16px;
+    color: grey;
+}
+
+  .imagen-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  .imagen-container img {
+    width: 100px; 
+    height: 100px; 
+  }
+  
+  .datos-container {
+    flex: 1 1 auto;
+  }
+
+  
+  
+  .indicadores-container {
+    flex: 0 0 auto;
+    margin-top: 20px;
+  }
+  
+  .indicadores-container h1 {
+    font-weight: bold;
+  }
+  
+  .indicadores-container table {
+    width: 100%;
+  }
+  
+  .indicadores-container th {
+    padding-right: 10px;
+  }
+  
+  .pruebas-container {
+    margin-top: 20px;
+  }
+
+
+  

@@ -1,25 +1,52 @@
-<h1>Maquetando . . . .</h1>
-<div>
-    <img [src]= "report.imagen">
-    <h1>Tienda San Isidro L01</h1>
-    <h1>Resultados</h1>
-    <table>
+<div class="contenedor-ppal">
+    <div class="imagen-container">
+        <img [src]="">
+    </div>
+    
+    <div class="datos-container">
+      <div>
+        <p class="nombre-titulo">{{ objetoModelo?.nombre}}</p>
+        <table>
+          <tr>
+            <th colspan="2">Valor</th>
+            <th>Ppto</th>
+            <th>Cumpl %</th>
+          </tr>
+          <!-- Agrega aquí las filas de datos de la tabla -->
+        
         <tr>
-            <th style="padding-right: 10px;">Valor $ </th>
-            <th style="padding-right: 10px;">Presupuesto</th>
-            <th style="padding-right: 10px;">Cumplimiento %</th>    
+            <td><p>Venta</p></td>
+            <td><p>{{ objetoModelo?.ventas }}</p></td>
         </tr>
         
-    </table>
-    <p>Venta</p>
-    <p>Unidades</p>
-    <p>Facturas</p>
-</div>
-<div>
-    <h1>Indicadores</h1>
-    <th>Resultado</th>
-    <p>UPF</p>
-    <p>VPF</p>
-    <p>PP</p>
-</div>
-
+        <tr>
+            <td><p>Unidades</p></td>
+            <td><p>{{ objetoModelo?.unidades }}</p></td>
+        </tr>
+        
+        <tr>
+            <td><p>Facturas</p></td>
+            <td><p>{{ objetoModelo?.facturas }}</p></td>
+        </tr>
+        </table>
+      </div>  
+      
+    <div class="indicadores-container">
+        <p>Indicadores</p>
+        <p>UPF</p>
+        <p>VPF</p>
+        <p>PP</p>
+    </div>
+    <div class="pruebas-container">
+        <button [routerLink]="['/temporal2']">Pruebas</button>
+      </div>
+    </div>
+  
+   
+  
+  
+ 
+  
+  <!-- Lineas para pruebas temporales-->
+  
+  

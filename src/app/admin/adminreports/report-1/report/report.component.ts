@@ -8,8 +8,7 @@ import { ObjetoModelo } from '../../../../core/models/baseventa.model'
 })
 export class ReportComponent implements OnInit{
 
-  @Input()
-  report!: ObjetoModelo;
+ @Input() objetoModelo: ObjetoModelo | undefined;
   
   constructor(){
 

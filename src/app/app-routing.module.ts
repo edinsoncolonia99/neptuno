@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'indicador', component:ReportlistComponent},
   {path: 'temporal', component:ReportComponent},
+  {path: 'temporal2',component:ReportlistComponent},
   {path: 'reporteventa', component:ReporventaComponent},
   {path: 'resumen', component:ResumenComponent}, 
   {path: 'usuarios', component:UsuariosComponent},

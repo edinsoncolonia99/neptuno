@@ -5,39 +5,85 @@
     
     <div class="datos-container">
       <div>
-        <p class="nombre-titulo">{{ objetoModelo?.nombre}}</p>
+        <div>
+          <p class="nombre-titulo">{{ objetoModelo?.nombre}}</p>
+        </div>
+        <div>
         <table>
           <tr>
             <th colspan="2">Valor</th>
             <th>Ppto</th>
             <th>Cumpl %</th>
           </tr>
-          <!-- Agrega aquí las filas de datos de la tabla -->
-        
-        <tr>
-            <td><p>Venta</p></td>
-            <td><p>{{ objetoModelo?.ventas }}</p></td>
-        </tr>
-        
-        <tr>
-            <td><p>Unidades</p></td>
-            <td><p>{{ objetoModelo?.unidades }}</p></td>
-        </tr>
-        
-        <tr>
-            <td><p>Facturas</p></td>
-            <td><p>{{ objetoModelo?.facturas }}</p></td>
-        </tr>
         </table>
-      </div>  
+        </div>
+        
+        <div class="container-padre">
+          <div class="container-hijo-izquierda">
+            <table>
+              <tr>
+                <td><p>Venta</p></td>
+              </tr>
+              <tr>
+                <td><p>Unidades</p></td>
+              </tr>
+              <tr>
+                <td><p>Facturas</p></td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="container-hijo-derecha">
+            <table>
+              <tr>
+                <td><p>{{ objetoModelo?.ventas }}</p></td>
+              </tr>
+              <tr>
+                <td><p>{{ objetoModelo?.unidades }}</p></td>
+              </tr>
+              <tr>
+                <td><p>{{ objetoModelo?.facturas }}</p></td>
+              </tr>
+            </table>
+        </div>
+        </div>
+          
       
-    <div class="indicadores-container">
-        <p>Indicadores</p>
-        <p>UPF</p>
-        <p>VPF</p>
-        <p>PP</p>
-    </div>
-    <div class="pruebas-container">
+      <div class="container-padre">
+        <div class="container-hijo-izquierda">
+          <table>
+          <tr>
+            <td><p>UPF</p></td>
+          </tr>
+
+          <tr>
+            <td><p>VPF</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>PP</p></td>
+          </tr>  
+          </table>  
+        </div>
+      
+        <div class="container-hijo-derecha">
+          <table>
+            <tr>
+              <td><p>1,12</p></td>
+            </tr>
+            
+            <tr>
+              <td><p>$12</p></td>
+            </tr>
+     
+            <tr>
+              <td><p>$9,3</p></td>
+            </tr>
+          </table>  
+        </div>
+      </div>
+
+      <div class="pruebas-container">
         <button [routerLink]="['/temporal2']">Pruebas</button>
       </div>
     </div>

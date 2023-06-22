@@ -6,6 +6,33 @@
     margin: 0 0 12px;
   }
 
+  .container-padre{
+    display: flex;
+    
+  }
+
+  .container-hijo-derecha{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .container-hijo-izquierda{
+    margin-right: 7px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .container-hijo-izquierda table{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  .container-hijo-derecha table{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+
 .nombre-titulo{
     font-weight: bold;
     font-size: 16px;
@@ -27,15 +54,6 @@
   }
 
   
-  
-  .indicadores-container {
-    flex: 0 0 auto;
-    margin-top: 20px;
-  }
-  
-  .indicadores-container h1 {
-    font-weight: bold;
-  }
   
   .indicadores-container table {
     width: 100%;

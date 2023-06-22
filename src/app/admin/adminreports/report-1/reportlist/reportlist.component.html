@@ -1,18 +1,25 @@
 <div class="volver-container">
     <mat-icon class="volver-icon">arrow_back</mat-icon>
     <a class="volver-link" (click)= "volverPpal()">Volver</a>
-  </div>
+</div>
   
-  <mat-form-field appearance="fill">
+<div class="form-contenedor">
+  <mat-form-field appearance="fill" flex>
     <mat-label>Rango de consultas</mat-label>
-    <mat-date-range-input [rangePicker]= "picker">
-      <input matStartDate placeholder="fecha inicial">
-      <input matEndDate placeholder="fecha final">
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="mm/dd/yyyy" />
+      <input matEndDate placeholder="mm/dd/yyyy" />
     </mat-date-range-input>
-    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]= "picker"></mat-datepicker-toggle>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
+<div class="execute-button">
+  <button mat-raised-button >Ir...</button>
+</div>
+  
+</div>
+
+
 
   <!-- Objetivo listar con NgIf los datos de cada tienda-->
 

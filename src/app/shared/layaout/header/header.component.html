@@ -1,9 +1,12 @@
 <div class="header-container">
-  <a routerLink="/menuppal" class="title-link">
-    <h1 class="menu-title">
-      <span class="title-text">Colonia Retail Business</span> 
-    </h1>
-  </a>
+  
+  <div class="encabezado-main">
+    <a routerLink="/menuppal">
+      <h1 class="menu-title">Mr. Colonia</h1>
+    </a>
+  </div>
+
+
 
   <div class="login-option">
     <div class="login-menu" [ngClass]="{'show': showLoginMenu}">
@@ -12,9 +15,10 @@
         <li><a href="#">Cerrar</a></li>
       </ul>
     </div>
-    <button class="login-button" (click)="toggleLoginMenu()">Login</button>
+    <button class="login-button" (click)= "toggleLoginMenu()">Login</button>
   </div>
 </div>
+
 
 
 

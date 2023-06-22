@@ -1,21 +1,26 @@
 <div class="contenedor-ppal">
-    <div class="imagen-container">
-        <img [src]="">
-    </div>
+    <div class="encabezado-ppal">
+      <div class="imagen-container">
+        <img [src]= "objetoModelo?.imagen">
+      </div>  
+        
+      <div class="encabezado-dato-tienda">
+            <tr>
+              <h1 class="nombre-titulo">{{ objetoModelo?.nombre }}</h1>
+              <p>{{objetoModelo?.ciudad}}</p>
+            </tr>
+          </div>
+      </div>  
+    
     
     <div class="datos-container">
-      <div>
-        <div>
-          <p class="nombre-titulo">{{ objetoModelo?.nombre}}</p>
-        </div>
-        <div>
-        <table>
-          <tr>
-            <th colspan="2">Valor</th>
-            <th>Ppto</th>
-            <th>Cumpl %</th>
-          </tr>
-        </table>
+      <div>  
+        <div class="contenedor-encabezado">
+        
+            <div class="campo-encabezado">Valor</div>
+            <div class="campo-encabezado">Ppto</div>
+            <div class="campo-encabezado">Cumpl %</div>
+        
         </div>
         
         <div class="container-padre">
@@ -25,10 +30,10 @@
                 <td><p>Venta</p></td>
               </tr>
               <tr>
-                <td><p>Unidades</p></td>
+                <td><p>Unid</p></td>
               </tr>
               <tr>
-                <td><p>Facturas</p></td>
+                <td><p>Fact</p></td>
               </tr>
             </table>
           </div>

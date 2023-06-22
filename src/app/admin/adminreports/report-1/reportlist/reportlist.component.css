@@ -1,0 +1,29 @@
+.volver-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .volver-icon {
+    margin-right: 5px;
+  }
+
+  .form-contenedor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-contenedor .mat-form-field {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .execute-button {
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  

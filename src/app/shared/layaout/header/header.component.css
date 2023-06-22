@@ -2,20 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
-.title-link {
-  text-decoration: none;
+.encabezado-main{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.login-option {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .menu-title {
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.title-text {
   text-decoration: none;
+  
 }
 
 .login-button {
@@ -36,6 +40,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .login-menu ul {
   list-style-type: none;
   padding: 0;

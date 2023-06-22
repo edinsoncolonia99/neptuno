@@ -1,15 +1,44 @@
 .contenedor-ppal {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    border-bottom: 2px solid #ccc;
+    flex-direction: column;
+
     margin: 0 0 12px;
   }
 
+  .encabezado-ppal {
+    display: flex;
+  }
+
+
+  .encabezado-dato-tienda{
+    flex: 1;
+  }
+
+  .imagen-container {
+    margin-right: 10px;
+  }
+  
+  .imagen-container img {
+    width: 100px; 
+    height: 100px; 
+  }
+
+  .contenedor-encabezado{
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr;
+    gap: 5px; 
+  }
+
+  .campo-encabezado{
+    text-align: center;
+  }
+
+
   .container-padre{
     display: flex;
-    
+    border-bottom: 1px dotted #000;
   }
+
 
   .container-hijo-derecha{
     display: flex;
@@ -36,18 +65,10 @@
 .nombre-titulo{
     font-weight: bold;
     font-size: 16px;
-    color: grey;
+
 }
 
-  .imagen-container {
-    flex: 0 0 auto;
-    margin-right: 10px;
-  }
-  
-  .imagen-container img {
-    width: 100px; 
-    height: 100px; 
-  }
+
   
   .datos-container {
     flex: 1 1 auto;

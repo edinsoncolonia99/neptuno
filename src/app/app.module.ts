@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './shared/layaout/header/header/header.component';
+import { HeaderComponent } from './shared/layaout/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -30,6 +30,9 @@ import { VentaoperativaComponent } from './admin/pages/ventaoperativa/ventaopera
 import { ObjetoModelo } from './core/models/baseventa.model';
 import { UsuarioService } from './core/services/usuario.service';
 import { AppRoutingModule } from '../app/app-routing.module';
+import { ReportlistComponent } from './admin/adminreports/report-1/reportlist/reportlist.component';
+import { ReportdetailComponent } from './admin/adminreports/report-1/reportdetail/reportdetail.component';
+import { ReportComponent } from './admin/adminreports/report-1/report/report.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { AppRoutingModule } from '../app/app-routing.module';
     MenuppalComponent,
     OpersubmenuComponent,
     VentaoperativaComponent,
+    ReportlistComponent,
+    ReportdetailComponent,
+    ReportComponent,
 
   ],
   imports: [

@@ -9,7 +9,7 @@ import { VolverService } from '../../../core/services/volverservices.service';
 })
 export class IndicadorComponent implements OnInit {
 
-  constructor(private volverService: VolverService){
+  constructor(public volverService: VolverService){
 
   }
 

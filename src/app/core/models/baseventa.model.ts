@@ -5,8 +5,12 @@ export class ObjetoModelo {
       public fecha: Date, 
       public ventas: number, 
       public unidades: number, 
-      public facturas: number, 
-      public ciudad: string
+      public facturas: number,
+      public ciudad: string,
+      public ptounidades?: number,
+      public ptofacturas?: number,
+      public ptoventas?: number, 
+      public imagen?: string,
       ){
     }
   }

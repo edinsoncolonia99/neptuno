@@ -1,13 +1,13 @@
 .contenedor-principal {
     display: grid;
-    grid-template-columns: 1fr; /* Una columna */
-    gap: 10px; /* Espacio entre los contenedores */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .valores {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
   }
   
   .elemento {
@@ -17,24 +17,54 @@
   
   .indicadores {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
   }
   
   .indicador {
     background-color: lightgreen;
     padding: 10px;
   }
-
-  .cumplimientos{
+  
+  .cumplimientos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
   }
-
+  
   .porcentajes {
     background-color: #7b5bf2;
     padding: 10px;
   }
   
+  .detalle-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .detalle-button button {
+    background-color: #5d8af2;
+  }
+  
+  .detalle {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-gap: 10px; 
+  }
+  
+  .titulo {
+    background-color: lightgray;
+  }  
+
+  .detalle-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .detalle-button button {
+    background-color: rgb(236, 236, 236);
+    width: 100%; 
+    border: none;
+    border-radius: 15px;
+  }
   

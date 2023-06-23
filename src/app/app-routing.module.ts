@@ -10,7 +10,7 @@ import { OpersubmenuComponent } from '../app/admin/pages/opersubmenu/opersubmenu
 import { VentaoperativaComponent } from '../app/admin/pages/ventaoperativa/ventaoperativa.component';
 import { NotFoundComponent } from '../app/home/not-found/not-found.component';
 import { ReportComponent } from '../app/admin/adminreports/report-1/report/report.component';
-
+import { ReportdetailComponent } from '../app/admin/adminreports/report-1/reportdetail/reportdetail.component';
 
 const appRoutes: Routes = [
   {path: 'menuppal', component:MenuppalComponent},
@@ -18,6 +18,7 @@ const appRoutes: Routes = [
   {path: 'indicador', component:ReportlistComponent},
   {path: 'temporal', component:ReportComponent},
   {path: 'temporal2',component:ReportlistComponent},
+  {path: 'reportdetail1',component:ReportdetailComponent},
   {path: 'reporteventa', component:ReporventaComponent},
   {path: 'resumen', component:ResumenComponent}, 
   {path: 'usuarios', component:UsuariosComponent},

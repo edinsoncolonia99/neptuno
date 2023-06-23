@@ -1,0 +1,40 @@
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 10px; /* Espacio entre los contenedores */
+  }
+  
+  .valores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+  
+  .elemento {
+    background-color: lightblue;
+    padding: 10px;
+  }
+  
+  .indicadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+  
+  .indicador {
+    background-color: lightgreen;
+    padding: 10px;
+  }
+
+  .cumplimientos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+
+  .porcentajes {
+    background-color: #7b5bf2;
+    padding: 10px;
+  }
+  
+  

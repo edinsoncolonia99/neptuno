@@ -1,6 +1,6 @@
 <div class="contenedor-ppal">
     <div class="encabezado-ppal">
-      <div class="imagen-container">
+      <div class="imagen-container" [routerLink]="['/reportdetail1']">
         <img [src]= "objetoModelo?.imagen">
       </div>  
         
@@ -10,7 +10,7 @@
               <p class="encabezado-dato-ciudad">{{objetoModelo?.ciudad}}</p>
             </tr>
           </div>
-      </div>  
+      </div>
     
     
     <div class="datos-container">

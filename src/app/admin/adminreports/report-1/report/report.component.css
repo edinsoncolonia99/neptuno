@@ -95,9 +95,11 @@
   .indicadores-container th {
     padding-right: 10px;
   }
-  
+
+
   .pruebas-container {
-    margin-top: 20px;
+    justify-content: center;
+    border-radius: 20px;;
   }
 
 

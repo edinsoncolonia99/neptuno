@@ -10,8 +10,8 @@ export class BaseventaService{
 
     getContacts(){
         return [
-            new ObjetoModelo('1', 'Tienda San Lucas', new Date(2023, 3, 2), 1000000, 50, 10, 'CALI', 0, 0, 0, "/Users/edinsoncolonia/Applications/neptuno/src/assets/icons/bolsa-de-la-compra.png"),
-            new ObjetoModelo('1', 'Calle 5',  new Date(2023, 3, 2), 2000, 18000000, 20, 'CALI'),
+            new ObjetoModelo('1', 'Tienda San Lucas', new Date(2023, 3, 2), 1000000, 50, 10, 'CALI', 0, 0, 0, "assets/icons/bolsa-de-la-compra.png"),
+            new ObjetoModelo('1', 'Calle 5',  new Date(2023, 3, 2), 2000, 18000000, 20, 'CALI', 0, 0 , 0, "assets/icons/acceso.png"),
             new ObjetoModelo('1', 'San Nicolas', new Date(1, 5, 2023), 1500, 75, 15, 'BOGOTA'),
             new ObjetoModelo('1', 'El Bosque L-231', new Date(1, 4, 2023), 1800, 90, 18, 'BOGOTA'),
             new ObjetoModelo('10', 'Quicentro', new Date(1, 1, 2023), 2800, 140, 28, 'MEDELLIN'),

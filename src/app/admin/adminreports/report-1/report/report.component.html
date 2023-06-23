@@ -4,10 +4,10 @@
         <img [src]= "objetoModelo?.imagen">
       </div>  
         
-      <div class="encabezado-dato-tienda">
+      <div>
             <tr>
-              <h1 class="nombre-titulo">{{ objetoModelo?.nombre }}</h1>
-              <p>{{objetoModelo?.ciudad}}</p>
+              <p class="encabezado-dato-tienda">{{ objetoModelo?.nombre }}</p>
+              <p class="encabezado-dato-ciudad">{{objetoModelo?.ciudad}}</p>
             </tr>
           </div>
       </div>  
@@ -54,7 +54,10 @@
         </div>
           
       
+      <div class="format-indicadores">Indicadores</div>
+
       <div class="container-padre">
+        
         <div class="container-hijo-izquierda">
           <table>
           <tr>

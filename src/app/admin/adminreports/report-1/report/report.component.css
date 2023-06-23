@@ -1,17 +1,23 @@
 .contenedor-ppal {
     display: flex;
     flex-direction: column;
-
     margin: 0 0 12px;
+    border-bottom: 2px solid #808085;
   }
 
   .encabezado-ppal {
     display: flex;
   }
 
+  .encabezado-dato-ciudad{
+    font-size: 15px;
+  }
 
   .encabezado-dato-tienda{
     flex: 1;
+    color: #2f2e2e;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .imagen-container {
@@ -19,14 +25,22 @@
   }
   
   .imagen-container img {
-    width: 100px; 
-    height: 100px; 
+    width: 80px; 
+    height: 80px; 
+  }
+
+  .format-indicadores{
+    color: #2f2e2e;
+    font-size: 15px;
+    font-weight: bolder;
   }
 
   .contenedor-encabezado{
     display: grid;
     grid-template-columns: 2.5fr 1.5fr 1fr;
     gap: 5px; 
+    color: #2f2e2e;
+    font-weight: bold;
   }
 
   .campo-encabezado{
@@ -36,7 +50,7 @@
 
   .container-padre{
     display: flex;
-    border-bottom: 1px dotted #000;
+
   }
 
 
@@ -68,8 +82,6 @@
 
 }
 
-
-  
   .datos-container {
     flex: 1 1 auto;
   }

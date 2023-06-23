@@ -1,11 +1,13 @@
 .menu-container {
   display: flex;
   flex-direction: column;
-  
   justify-content: center;
-  height: 80vh;
-  margin-top: -50px;
+  height: 90vb;
+  width: 49vb;
+  margin-top: -100px;
   background-color: #edf2fa;
+  border-radius: 20px;
+  
 }
 
 .button-row {
@@ -53,11 +55,11 @@
 
 .encabezado-ppal-1 {
   display: flex;
-  justify-content: flex-start;  
+  justify-content: center;  
 }
 
 .encabezado-ppal {
-  margin-left: auto;
+  
   color: #2f2e2e;
 }
 

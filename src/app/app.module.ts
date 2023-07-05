@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './app.component';
@@ -70,7 +71,8 @@ import { ReportComponent } from './admin/adminreports/report-1/report/report.com
     ReactiveFormsModule,
     MatIconModule,
     NgxChartsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [VolverService, UsuarioService, LoginComponent],
   bootstrap: [AppComponent],

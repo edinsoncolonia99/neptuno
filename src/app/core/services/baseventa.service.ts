@@ -1,12 +1,22 @@
 import { Injectable} from '@angular/core';
 import { ObjetoModelo } from '../models/baseventa.model';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class BaseventaService{
-    constructor(){}
+    private basedatosSubject = new BehaviorSubject<ObjetoModelo[]>([]);
+     
+    
+    constructor(private http:HttpClient){}
+
+
+    getVentas(){
+        return this.http.get<ObjetoModelo[]> ('');
+    }
 
     getContacts(){
         return [

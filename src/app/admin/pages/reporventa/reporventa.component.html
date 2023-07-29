@@ -7,7 +7,7 @@
   <mat-form-field>
     <mat-label>Elegir la fecha</mat-label>
     <input matInput [matDatepicker]= "picker" formControlName="fecha" placeholder="MM/DD/YYYY" class="custom-placeholder">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker-toggle matSuffix [for]= "picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
@@ -39,8 +39,8 @@
 
     <div class="button-container">
       <button mat-raised-button color="primary" type="submit" class="custom-button">Aceptar</button>
-      <button mat-raised-button color="primary" type="button" class="custom-button" (click)="salir()">Salir</button>
-      <button mat-raised-button color="primary" type="button" class="custom-button" (click)="consultar()">Consultar</button>
+      <button mat-raised-button color="primary" type="button" class="custom-button" (click)= "salir()">Salir</button>
+      <button mat-raised-button color="primary" type="button" class="custom-button" (click)= "consultar()">Consultar</button>
     </div>
   </form>
 </div>

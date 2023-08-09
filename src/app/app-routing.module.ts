@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { RouterModule, Routes } from '@angular/router';
+
 import { MenuppalComponent } from '../app/home/menuppal/menuppal.component';
 import { LoginComponent} from '../app/login/login.component';
 import { ReportlistComponent } from '../app/admin/adminreports/report-1/reportlist/reportlist.component';
@@ -11,6 +13,7 @@ import { VentaoperativaComponent } from '../app/admin/pages/ventaoperativa/venta
 import { NotFoundComponent } from '../app/home/not-found/not-found.component';
 import { ReportComponent } from '../app/admin/adminreports/report-1/report/report.component';
 import { ReportdetailComponent } from '../app/admin/adminreports/report-1/reportdetail/reportdetail.component';
+
 
 const appRoutes: Routes = [
   {path: 'menuppal', component:MenuppalComponent},

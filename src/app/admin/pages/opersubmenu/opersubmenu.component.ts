@@ -3,11 +3,14 @@ import { Router } from '@angular/router';
 import { VolverService } from '../../../core/services/volverservices.service';
 
 
+
 @Component({
   selector: 'app-opersubmenu',
   templateUrl: './opersubmenu.component.html',
   styleUrls: ['./opersubmenu.component.css']
 })
+
+
 
 export class OpersubmenuComponent{
 

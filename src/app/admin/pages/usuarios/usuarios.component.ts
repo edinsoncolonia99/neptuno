@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginPpal } from '../../../core/models/login.model';
-import { UsuarioService } from '../../../core/services/usuario.service';
+//import { UsuarioService } from '../../../core/services/usuario.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+//import { UserI } from 'src/app/core/models/user.interface';
 
 
 @Component({
@@ -13,11 +13,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class UsuariosComponent implements OnInit {
 
   constructor(
-    public usuarioService:UsuarioService,
+    //public usuarioService:UserI,
     private router: Router,
     private snackBar: MatSnackBar){}
 
-  private LoginPpal:LoginPpal[] = [];
+  //private LoginPpal:LoginPpal[] = [];
   username:string | undefined;
   password:string | undefined;
   passwordConfirm: string |undefined;

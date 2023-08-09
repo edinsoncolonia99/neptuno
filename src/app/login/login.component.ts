@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
-import { LoginPpal} from '../core/models/login.model'
+import { Component, OnInit } from '@angular/core';
 import { VolverService } from '../core/services/volverservices.service';
+import { AuthService } from '../core/services/auth.service'
+import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuarioService } from '../core/services/usuario.service';
-
 
 
 @Component({
@@ -11,29 +10,40 @@ import { UsuarioService } from '../core/services/usuario.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
+  loginForm = this.fb.group({
+    username:[''],
+    password:['']
+  });
 
-  public loginppal:LoginPpal[] = [];
-  public username: string | undefined;
-  public password: string | undefined;
+  constructor(
+    public volverService:VolverService,
+    private authSvc: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+    ){}
 
-  constructor(public volverService:VolverService,
-              public usuarioService:UsuarioService,
-              public router:Router
-            ){}
-
-  volverPpal() {
-    this.volverService.volver();
+  
+  ngOnInit(): void {
+    const userData = {
+      username: 'ecolonia',
+      password: 'Ecolonia*123'
+    };
+    this.authSvc.login(userData).subscribe((res) =>console.log('login') )
   }
 
-  ingresar() {
-    
+  onLogin():void {
+    const formValue = this.loginForm.value;
+    this.authSvc.login(formValue).subscribe((res) => {
+      if(res){
+        this.router.navigate(['']);
+      }
+    });
   }
 
-  onSubmit() {
-    // Listo para armar un API
-    console.log('Username: ' + this.username);
-    console.log('Password: ' + this.password);
-    this.router.navigate(['/menuppal']);
-}
+
+//volverPpal() {
+//  this.volverService.volver();
+//}
+
 }

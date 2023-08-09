@@ -1,0 +1,19 @@
+<div class="volver-container">
+  <mat-icon class="volver-icon">arrow_back</mat-icon>
+  <a class="volver-link" (click)= "volverPpal()">Volver</a>
+</div>
+
+<h1>Ficha técnica</h1>
+<div>
+  <p (click)="toggleSubMenu()">
+    <mat-icon>people</mat-icon> Usuarios
+  </p>
+  <ul class="no-bullets" *ngIf="showSubMenu">
+    <li><p href="#" (click)= "menuCrearUsuario()"><mat-icon>add</mat-icon> Crear</p></li>
+    <li><p href="#"><mat-icon>edit</mat-icon> Modificar</p></li>
+    <li><p href="#"><mat-icon>delete</mat-icon> Eliminar</p></li>
+    <li><p href="#"><mat-icon>search</mat-icon> Consultar</p></li>
+  </ul>
+</div>
+
+<p><mat-icon>store</mat-icon> tiendas</p>

@@ -1,0 +1,28 @@
+{
+  "baseventas": [
+    { 
+      "codigo": 1, 
+      "nombre": "lina", 
+      "fecha": "typicode",
+      "ventas": 1,
+      "unidades": 1,
+      "facturas": 1,
+      "ciudad": "CALI",
+      "ptounidades": 1,
+      "ptofacturas": 1,
+      "imagen": 1
+  }, 
+  { 
+      "codigo": 2, 
+      "nombre": "Edin", 
+      "fecha": "typicode",
+      "ventas": 1,
+      "unidades": 1,
+      "facturas": 1,
+      "ciudad": "CALI",
+      "ptounidades": 1,
+      "ptofacturas": 1,
+      "imagen": 1
+  }
+  ]
+}

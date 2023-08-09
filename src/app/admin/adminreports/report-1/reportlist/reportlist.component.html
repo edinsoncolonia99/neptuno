@@ -1,0 +1,31 @@
+  
+  <div class="container-ppal">
+    <div class="volver-container">
+      <mat-icon class="volver-icon">arrow_back</mat-icon>
+        <a class="volver-link" (click)= "volverPpal()">Volver</a>
+    </div>
+  
+    <!--
+    <div class="form-contenedor">
+      <mat-form-field appearance="fill" flex>
+        <mat-label>Rango de consultas</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="mm/dd/yyyy" />
+          <input matEndDate placeholder="mm/dd/yyyy" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="#7b5bf2" type="submit" class="execute-button">Consultar</button>
+      </div>
+  </div>
+
+  <div class="buscar-contact">
+    <input type="text" id="buscar" name="buscar" placeholder="Buscar">
+  </div>
+
+-->
+  <!-- Objetivo listar con NgIf los datos de cada tienda-->
+  <app-report *ngFor= "let objetoModelo of objetoModelo"
+    [objetoModelo]= "objetoModelo"></app-report>

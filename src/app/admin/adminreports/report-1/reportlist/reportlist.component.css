@@ -1,0 +1,39 @@
+.volver-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .volver-icon {
+    margin-right: 5px;
+  }
+
+  .form-contenedor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-contenedor .mat-form-field {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .execute-button {
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    background-color: #7b5b7d; /* Cambia "red" al color deseado */
+    color: white; /* Cambia "white" al color deseado para el texto del botón */
+  }
+
+  .buscar-contact input[type="text"] {
+    background-color: rgb(236, 236, 236);
+    width: 325px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #808085;
+    padding-left: 25px;
+    margin-bottom: 15px;
+  }

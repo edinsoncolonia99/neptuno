@@ -1,47 +1,19 @@
-form {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 35px;
-  border-radius: 10px;
-  background-color: #f7f7f7;
-  }
+.login-form {
+  padding: 4rem 1rem;
+}
 
-  
-  
-  label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-  
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border:black;
-    border-radius: 20px;
-    background-color: white;
-    color: #333;
-    font-size: 1rem;
-  }
-  
-  button[type="submit"] {
-    display: block;
-    width: 85%;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: white;
-    color:black;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: gray;
-  }
-  
-  
+.login-form .mat-card {
+  max-width: 300px;
+  margin: 2rem auto;
+  text-align: center;
+  height: 350px;
+}
+
+.login-form .full-width-input,
+.login-form button {
+  width: 100%;
+}
+
+.login-form .margen {
+  margin-bottom: 2rem;
+}

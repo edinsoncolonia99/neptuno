@@ -1,0 +1,106 @@
+<div class="contenedor-ppal">
+    <div class="encabezado-ppal">
+      <div class="imagen-container" [routerLink]="['/reportdetail1']">
+        <img [src]= "objetoModelo?.imagen">
+      </div>  
+        
+      <div>
+            <tr>
+              <p class="encabezado-dato-tienda">{{ objetoModelo?.nombre }}</p>
+              <p class="encabezado-dato-ciudad">{{objetoModelo?.ciudad}}</p>
+            </tr>
+          </div>
+      </div>
+    
+    
+    <div class="datos-container">
+      <div>  
+        <div class="contenedor-encabezado">
+        
+            <div class="campo-encabezado">Valor</div>
+            <div class="campo-encabezado">Ppto</div>
+            <div class="campo-encabezado">Cumpl %</div>
+        
+        </div>
+        
+        <div class="container-padre">
+          <div class="container-hijo-izquierda">
+            <table>
+              <tr>
+                <td><p>Venta</p></td>
+              </tr>
+              <tr>
+                <td><p>Unid</p></td>
+              </tr>
+              <tr>
+                <td><p>Fact</p></td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="container-hijo-derecha">
+            <table>
+              <tr>
+                <td><p>{{ objetoModelo?.ventas }}</p></td>
+              </tr>
+              <tr>
+                <td><p>{{ objetoModelo?.unidades }}</p></td>
+              </tr>
+              <tr>
+                <td><p>{{ objetoModelo?.facturas }}</p></td>
+              </tr>
+            </table>
+        </div>
+        </div>
+          
+      
+      <div class="format-indicadores">Indicadores</div>
+
+      <div class="container-padre">
+        
+        <div class="container-hijo-izquierda">
+          <table>
+          <tr>
+            <td><p>UPF</p></td>
+          </tr>
+
+          <tr>
+            <td><p>VPF</p></td>
+          </tr>
+          
+          <tr>
+            <td><p>PP</p></td>
+          </tr>  
+          </table>  
+        </div>
+      
+        <div class="container-hijo-derecha">
+          <table>
+            <tr>
+              <td><p>1,12</p></td>
+            </tr>
+            
+            <tr>
+              <td><p>$12</p></td>
+            </tr>
+     
+            <tr>
+              <td><p>$9,3</p></td>
+            </tr>
+          </table>  
+        </div>
+      </div>
+
+      <div class="pruebas-container">
+        <button [routerLink]="['/temporal2']">Pruebas</button>
+      </div>
+    </div>
+  
+   
+  
+  
+ 
+  
+  <!-- Lineas para pruebas temporales-->
+  
+  

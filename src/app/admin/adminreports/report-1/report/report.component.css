@@ -1,0 +1,106 @@
+.contenedor-ppal {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 12px;
+    border-bottom: 2px solid #808085;
+  }
+
+  .encabezado-ppal {
+    display: flex;
+  }
+
+  .encabezado-dato-ciudad{
+    font-size: 15px;
+  }
+
+  .encabezado-dato-tienda{
+    flex: 1;
+    color: #2f2e2e;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .imagen-container {
+    margin-right: 10px;
+  }
+  
+  .imagen-container img {
+    width: 80px; 
+    height: 80px; 
+  }
+
+  .format-indicadores{
+    color: #2f2e2e;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  .contenedor-encabezado{
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr;
+    gap: 5px; 
+    color: #2f2e2e;
+    font-weight: bold;
+  }
+
+  .campo-encabezado{
+    text-align: center;
+  }
+
+
+  .container-padre{
+    display: flex;
+
+  }
+
+
+  .container-hijo-derecha{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .container-hijo-izquierda{
+    margin-right: 7px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .container-hijo-izquierda table{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  .container-hijo-derecha table{
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+
+.nombre-titulo{
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+  .datos-container {
+    flex: 1 1 auto;
+  }
+
+  
+  
+  .indicadores-container table {
+    width: 100%;
+  }
+  
+  .indicadores-container th {
+    padding-right: 10px;
+  }
+
+
+  .pruebas-container {
+    justify-content: center;
+    border-radius: 20px;;
+  }
+
+
+  

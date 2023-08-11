@@ -16,6 +16,9 @@ export class LoginComponent implements OnInit{
     password:['']
   });
 
+  showPassword: boolean = false;
+
+
   constructor(
     public volverService:VolverService,
     private authSvc: AuthService,
@@ -40,6 +43,10 @@ export class LoginComponent implements OnInit{
         this.router.navigate(['']);
       }
     });
+  }
+
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
   }
 
 

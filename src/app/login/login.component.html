@@ -19,12 +19,11 @@
       <mat-card-header>
         !Bienvenido!
       </mat-card-header>
-      <h1>!Bienvenido!</h1>
       <form [formGroup]= "loginForm" (ngSubmit)= "onLogin()">
       <mat-form-field class="full-width-input">
         <input
           type="text" 
-          formControlName="username"
+          formControlName="email"
           matInput placeholder="Usuario" 
           required
         />
@@ -33,7 +32,7 @@
         <input 
           type="password" 
           formControlName="password"
-          matInput placeholder="password" 
+          matInput placeholder="Password" 
           required
         />
       </mat-form-field>

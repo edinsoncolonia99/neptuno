@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { VolverService } from '../core/services/volverservices.service';
 import { AuthService } from '../core/services/auth.service'
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
   loginForm = this.fb.group({
-    username:[''],
+    email:[''],
     password:['']
   });
 
@@ -20,14 +20,15 @@ export class LoginComponent implements OnInit{
     public volverService:VolverService,
     private authSvc: AuthService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
     ){}
 
   
   ngOnInit(): void {
     const userData = {
-      username: 'ecolonia',
-      password: 'Ecolonia*123'
+      email: 'john@mail.com',
+      password: 'changeme'
     };
     this.authSvc.login(userData).subscribe((res) =>console.log('login') )
   }

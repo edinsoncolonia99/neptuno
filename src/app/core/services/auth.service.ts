@@ -3,7 +3,6 @@ import { Injectable} from '@angular/core';
 import{ environment } from '../../../../src/environment/environment'; 
 import { UserI, UserResponseI, Roles } from '../models/user.interface';
 import { BehaviorSubject, Observable, catchError, map, throwError  } from 'rxjs';
-
 import { HttpErrorResponse } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
@@ -20,7 +19,7 @@ export class AuthService{
   private loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor( private http: HttpClient ){
-    this.checkToken();
+    //this.checkToken();
   };
 
 
@@ -33,8 +32,8 @@ export class AuthService{
     .pipe (
       map( (res: UserResponseI) => {
       console.log('resp :' ,  res );
-      this.saveToken(res.token);
-      this.loggedIn.next(true);
+      //this.saveToken(res.token);
+      //this.loggedIn.next(true);
       return res;
     }),
     catchError((err) => this.handlerError(err))
@@ -52,12 +51,13 @@ logout(): void{
   this.loggedIn.next(false);
 }
 
-private checkToken(): void{
-  const userToken = localStorage.getItem('token');
-  const isExpired = helper.isTokenExpired(userToken);
-  console.log('isEspired', isExpired);
-  isExpired ? this.logout() : this.loggedIn.next(true);
-};
+
+  //private checkToken(): void{
+  //const userToken = localStorage.getItem('token');
+  //const isExpired = helper.isTokenExpired(userToken);
+  //console.log('isEspired', isExpired);
+  // isExpired ? this.logout() : this.loggedIn.next(true);
+//};
 
 
 

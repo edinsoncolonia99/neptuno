@@ -2,7 +2,7 @@
   padding: 4rem 1rem;
 }
 
-.login-form .mat-card {
+.login-form .mat-card .mat-card-content{
   max-width: 300px;
   margin: 2rem auto;
   text-align: center;

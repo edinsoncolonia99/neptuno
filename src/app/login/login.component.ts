@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit{
   
   ngOnInit(): void {
     const userData = {
+      //email: 'ecolonia',
+      //identifier: 'ecolonia',
+      //password: 'Ecolonia*123'
       email: 'john@mail.com',
       password: 'changeme'
     };

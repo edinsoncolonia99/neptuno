@@ -35,7 +35,7 @@
 }
 
 .button-container button {
-  margin-left: 5px; /* Establece el espacio entre los botones */
+  margin-left: 5px; 
 }
 
 .custom-button {
@@ -58,9 +58,9 @@
     justify-content: flex-end;
     margin-top: 20px;
     margin-left: 10px;
-    width: 150px; /* Ajusta el ancho del botón según tus necesidades */
-    height: 40px; /* Ajusta la altura del botón según tus necesidades */
-    border-radius: 5px; /* Establece el radio de las esquinas */
+    width: 150px; 
+    height: 40px;
+    border-radius: 5px; 
   }
 }
 

@@ -19,7 +19,7 @@ export class AuthService{
   private loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor( private http: HttpClient ){
-    //this.checkToken();
+    this.checkToken();
   };
 
 
@@ -32,8 +32,8 @@ export class AuthService{
     .pipe (
       map( (res: UserResponseI) => {
       console.log('resp :' ,  res );
-      //this.saveToken(res.token);
-      //this.loggedIn.next(true);
+      this.saveToken(res.access_token);
+      this.loggedIn.next(true);
       return res;
     }),
     catchError((err) => this.handlerError(err))
@@ -41,8 +41,8 @@ export class AuthService{
 }
 
 // Guarda token
-private saveToken(token: string): void{
-  localStorage.setItem('token', token);
+private saveToken(access_token: string): void{
+  localStorage.setItem('token', access_token);
 };
 
 // Elimina token del storage
@@ -52,12 +52,16 @@ logout(): void{
 }
 
 
-  //private checkToken(): void{
-  //const userToken = localStorage.getItem('token');
-  //const isExpired = helper.isTokenExpired(userToken);
-  //console.log('isEspired', isExpired);
-  // isExpired ? this.logout() : this.loggedIn.next(true);
-//};
+
+// avanzado para la expricaión del token de acuerdo con 
+// tiempo que se asigne en la API.
+
+  private checkToken(): void{
+    const userToken = localStorage.getItem('token');
+    const isExpired = helper.isTokenExpired(userToken);
+    console.log('isEspired ?? ->', isExpired);
+    isExpired ? this.logout() : this.loggedIn.next(true);
+};
 
 
 

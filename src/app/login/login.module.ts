@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
     declarations: [LoginComponent],
@@ -19,7 +21,8 @@ import { MatButtonModule} from '@angular/material/button';
         MatInputModule,
         Material2Module,
         ReactiveFormsModule,
-        MatButtonModule
+        MatButtonModule,
+        MatIconModule,
     ],
 })
 export class LoginModule {}

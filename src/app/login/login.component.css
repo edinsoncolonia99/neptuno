@@ -2,7 +2,7 @@
   padding: 4rem 1rem;
 }
 
-.login-form .mat-card {
+.login-form .mat-card .mat-card-content {
   max-width: 300px;
   margin: 2rem auto;
   text-align: center;
@@ -14,6 +14,32 @@
   width: 100%;
 }
 
+.password-icon {
+  cursor: pointer;
+  margin-left: -24px;
+}
+
 .login-form .margen {
   margin-bottom: 2rem;
 }
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  font-size: 24px;
+  text-align: center; 
+}
+
+.login-bienvenido{
+  display: flex;
+  font-size: 24px;
+  padding-bottom: 5px;
+  padding-top: 50px;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+

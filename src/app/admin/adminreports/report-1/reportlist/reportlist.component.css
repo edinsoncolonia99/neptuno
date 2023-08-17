@@ -22,8 +22,8 @@
     border-radius: 10px;
     width: 75px;
     height: 40px;
-    background-color: #7b5b7d; /* Cambia "red" al color deseado */
-    color: white; /* Cambia "white" al color deseado para el texto del botón */
+    background-color: #7b5b7d;
+    color: white; 
   }
 
   .buscar-contact input[type="text"] {

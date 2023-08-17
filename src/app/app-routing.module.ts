@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
-
 import { MenuppalComponent } from '../app/home/menuppal/menuppal.component';
 import { LoginComponent} from '../app/login/login.component';
 import { ReportlistComponent } from '../app/admin/adminreports/report-1/reportlist/reportlist.component';
@@ -16,8 +14,8 @@ import { ReportdetailComponent } from '../app/admin/adminreports/report-1/report
 
 
 const appRoutes: Routes = [
-  {path: 'menuppal', component:MenuppalComponent},
   {path: 'login', component:LoginComponent},
+  {path: 'menuppal', component:MenuppalComponent},
   {path: 'indicador', component:ReportlistComponent},
   {path: 'temporal', component:ReportComponent},
   {path: 'temporal2',component:ReportlistComponent},
@@ -28,7 +26,7 @@ const appRoutes: Routes = [
   {path: 'opersubmenu', component:OpersubmenuComponent},
   {path: 'resultado', component:VentaoperativaComponent}, //trasladar a ResulventaCom..
   {path: '',
-  redirectTo: '/menuppal',
+  redirectTo: '/login',
   pathMatch: 'full'
 },
   {path: '**' , component:NotFoundComponent}

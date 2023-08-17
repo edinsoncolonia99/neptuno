@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule} from '../app/login/login.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { LoginModule} from '../app/login/login.module';
     ReportlistComponent,
     ReportdetailComponent,
     ReportComponent,
+  
     
   ],
   imports: [
@@ -47,6 +49,7 @@ import { LoginModule} from '../app/login/login.module';
     CommonModule,
     BrowserAnimationsModule,
     LoginModule,
+    
   ],
   providers: [VolverService],
   bootstrap: [AppComponent],

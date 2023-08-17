@@ -17,7 +17,7 @@
               "lodash",
               "rfdc"
            ],
-            "outputPath": "dist/neptuno",
+            "outputPath": "dist",
             "index": "src/index.html",
             "baseHref": "/neptuno/",
             "main": "src/main.ts",

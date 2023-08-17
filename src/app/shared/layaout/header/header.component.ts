@@ -9,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class HeaderComponent implements OnInit {
-  public showLoginMenu = false;
+  
+  isLoggedIn = false;
   
   constructor() { }
 
 
-  public toggleLoginMenu(): void {
-    this.showLoginMenu = !this.showLoginMenu;
+  toggleLoginState() {
+    this.isLoggedIn = !this.isLoggedIn;
   }
 
   ngOnInit(): void {

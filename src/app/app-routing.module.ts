@@ -12,7 +12,6 @@ import { NotFoundComponent } from '../app/home/not-found/not-found.component';
 import { ReportComponent } from '../app/admin/adminreports/report-1/report/report.component';
 import { ReportdetailComponent } from '../app/admin/adminreports/report-1/reportdetail/reportdetail.component';
 
-
 const appRoutes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'menuppal', component:MenuppalComponent},
@@ -31,8 +30,6 @@ const appRoutes: Routes = [
 },
   {path: '**' , component:NotFoundComponent}
 ];
-
-
 
 @NgModule({
   //imports: [RouterModule.forRoot(routes)],

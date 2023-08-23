@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit{
     const formValue = this.loginForm.value;
     this.authSvc.login(formValue).subscribe((res) => {
       if(res){
-        this.router.navigate(['']);
+        this.router.navigate(['/menuppal']);
       }
     });
   }

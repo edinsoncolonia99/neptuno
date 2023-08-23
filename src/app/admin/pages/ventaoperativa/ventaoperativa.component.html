@@ -1,6 +1,6 @@
 
 
-<div class="volver-container" [style.margin-top.px]= "fijarHeader ? 80 : 0">
+<div class="volver-container">
   <mat-icon class="volver-icon">arrow_back</mat-icon>
   <a class="volver-link" (click)= "volverAtras()">Volver</a>
 </div>
@@ -8,11 +8,7 @@
  <!-- Genera la fijacion del header con scroll -->
  <!--[class.fijar-header]= "fijarHeader" -->
 
- <!--
-
- 
-
-<h1 >Resumen de ventas</h1>
+<h1 class="tittle" >Resumen de ventas</h1>
 <div class="form-container">
     <form [formGroup]= "consultaForm" (ngSubmit)= "consultarDatos()">
       <mat-form-field>
@@ -63,4 +59,3 @@
     </table>
   </div>
   
--->

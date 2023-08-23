@@ -1,12 +1,12 @@
 .volver-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-  .volver-icon {
-    margin-right: 5px;
-  }
+.volver-icon {
+  margin-right: 5px;
+}
 
 .row {
     display: flex;
@@ -24,7 +24,17 @@
     align-items: center;
   }
 
-  .fijar-header{
+  .form-container{
+    margin-left: 20px;
+  }
+
+  .tittle{
+    margin-left: 20px;
+    
+  }
+
+
+  /*.fijar-header{
     position: fixed;
     top: 0;
     left: 0;
@@ -35,4 +45,5 @@
     padding-top: 2px;
     padding-bottom: 2px;
   }
+  */
   

@@ -20,33 +20,23 @@
 
 .custom-button {
   width: 300px;
-  height: 100px;
-  font-size: 18px;
+  height: 90px;
+  font-size: 25px;
   margin: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-decoration: none;
   outline: none;
   border: none;
   flex-direction: column;
-  align-items: right;
-  padding-top: 20px;
   background-color: #09184D;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.265);
-  justify-content: center; 
-  position: relative;
 }
 
 .button-icon {
   position: absolute;
-  bottom: 10px;
-  left: 5px; 
-  font-size: 30px;
-}
-
-.custom-login-button {
-  width: 310px; 
-  color: #000000;
-  justify-content: center;
+  bottom: 35px;
+  left: 30px; 
+  font-size: 20px;
 }
 
 .custom-option-button {
@@ -61,6 +51,12 @@
 .encabezado-ppal {
   
   color: #2f2e2e;
+}
+
+.custom-login-button {
+  width: 400px; 
+  color: #000000;
+  justify-content: center;
 }
 
 

@@ -3,6 +3,7 @@
   import { MatSnackBar } from '@angular/material/snack-bar';
   import { Router } from '@angular/router';
   import { VolverService } from '../../../core/services/volverservices.service';
+  
 
   @Component({
     selector: 'app-reporventa',
@@ -11,15 +12,15 @@
   })
   export class ReporventaComponent implements OnInit {
 
-
-   
     reporteForm!: FormGroup;
     formularioEnviado: boolean = false; // Nueva propiedad para verificar si el formulario ha sido enviado
 
     fechaActual: Date = new Date();
 
-    constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, 
-      private router:Router, private volverService:VolverService) {
+    constructor(private formBuilder: FormBuilder, 
+                private snackBar: MatSnackBar, 
+                private router:Router, 
+                private volverService:VolverService) {
       
         this.reporteForm = new FormGroup({
         ventaConIva: new FormControl ('', Validators.required),
@@ -87,7 +88,6 @@
       if (fechaSeleccionada > fechaActual) {
         return { fechaInvalida: true };
       }
-
       return null;
     }
   }

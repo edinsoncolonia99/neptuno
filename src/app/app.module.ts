@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule} from '../app/login/login.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -49,7 +50,8 @@ import { LoginModule} from '../app/login/login.module';
     CommonModule,
     BrowserAnimationsModule,
     LoginModule,
-    
+    MatSnackBarModule,
+
   ],
   providers: [VolverService],
   bootstrap: [AppComponent],
